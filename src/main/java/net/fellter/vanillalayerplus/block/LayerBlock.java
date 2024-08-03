@@ -9,7 +9,6 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.state.property.Property;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -110,7 +109,7 @@ public class LayerBlock extends Block implements Waterloggable {
         BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos());
         if (blockState.isOf(this)) {
             int i = blockState.get(LAYERS);
-            return blockState.with(LAYERS, Math.min(8, i + 1));
+            return blockState.with(LAYERS, Math.min(8, i + 1)).with(WATERLOGGED, blockState.get(WATERLOGGED));
         }
         return super.getPlacementState(ctx);
     }
