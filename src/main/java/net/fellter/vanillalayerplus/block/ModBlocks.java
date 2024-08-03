@@ -1,6 +1,7 @@
 package net.fellter.vanillalayerplus.block;
 
 import net.fellter.vanillalayerplus.VanillaLayerPlus;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -9,6 +10,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
+
+    public static final Block OAK_LAYER = registerBlock("oak_layer",
+            new Block(AbstractBlock.Settings.create()));
 
 
 
