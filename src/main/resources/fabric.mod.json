@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "vanillalayerplus",
+	"version": "${version}",
+	"name": "vanillalayerplus",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/vanillalayerplus/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.fellter.vanillalayerplus.VanillaLayerPlus"
+		],
+		"fabric-datagen": [
+			"net.fellter.vanillalayerplus.VanillaLayerPlusDataGenerator"
+		]
+	},
+	"mixins": [
+		"vanillalayerplus.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
