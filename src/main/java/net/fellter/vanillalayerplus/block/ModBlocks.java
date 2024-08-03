@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     public static final Block OAK_LAYER = registerBlock("oak_layer",
-            new Block(AbstractBlock.Settings.create()));
+            new LayerBlock(AbstractBlock.Settings.create()));
 
 
 

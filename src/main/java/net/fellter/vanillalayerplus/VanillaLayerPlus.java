@@ -3,6 +3,8 @@ package net.fellter.vanillalayerplus;
 import net.fabricmc.api.ModInitializer;
 
 import net.fellter.vanillalayerplus.block.ModBlocks;
+import net.fellter.vanillalayerplus.item.ModItemGroups;
+import net.fellter.vanillalayerplus.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,5 +16,7 @@ public class VanillaLayerPlus implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModBlocks.registerModBlocks();
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
 	}
 }

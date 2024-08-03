@@ -14,4 +14,8 @@ public class ModItems {
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(VanillaLayerPlus.MOD_ID, name), item);
     }
+
+    public static void registerModItems() {
+        VanillaLayerPlus.LOGGER.info("Registering Mod Items for " + VanillaLayerPlus.MOD_ID);
+    }
 }

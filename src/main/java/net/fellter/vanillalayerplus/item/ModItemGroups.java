@@ -2,6 +2,7 @@ package net.fellter.vanillalayerplus.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fellter.vanillalayerplus.VanillaLayerPlus;
+import net.fellter.vanillalayerplus.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -16,7 +17,12 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.vanillalayerplus"))
                     .icon(() -> new ItemStack(ModItems.VLP_TITLE)).entries((displayContext, entries) -> {
 
-
+                        entries.add(ModBlocks.OAK_LAYER);
 
                     }).build());
+
+
+    public static void registerItemGroups() {
+        VanillaLayerPlus.LOGGER.info("Registering Item Groups for " + VanillaLayerPlus.MOD_ID);
+    }
 }
