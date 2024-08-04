@@ -1,1 +1,4 @@
-// 1.21	2024-08-03T17:40:12.1825154	vanillalayerplus/Block Loot Tables
+// 1.21	2024-08-04T14:44:23.4199803	vanillalayerplus/Block Loot Tables
+e4325daa2f07645b8254274330446ca1650e11d9 data\vanillalayerplus\loot_table\blocks\oak_layer.json
+edc39612af72c469a2f13d4449c6fa656d82fdcc data\vanillalayerplus\loot_table\blocks\oak_wood_layer.json
+d49d46f091241c9889f4ad7afe05d43b86b9b348 data\vanillalayerplus\loot_table\blocks\oak_log_layer.json

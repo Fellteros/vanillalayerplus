@@ -18,6 +18,8 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.VLP_TITLE)).entries((displayContext, entries) -> {
 
                         entries.add(ModBlocks.OAK_LAYER);
+                        entries.add(ModBlocks.OAK_LOG_LAYER);
+                        entries.add(ModBlocks.OAK_WOOD_LAYER);
 
                     }).build());
 

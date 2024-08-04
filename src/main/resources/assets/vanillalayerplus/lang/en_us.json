@@ -1,5 +1,7 @@
 {
+  "block.vanillalayerplus.oak_layer": "Oak Layer",
+  "block.vanillalayerplus.oak_log_layer": "Oak Log Layer",
+  "block.vanillalayerplus.oak_wood_layer": "Oak Wood Layer",
 
-
-  "itemgroup.vanillalayerplus": "Vanilla+ Layer"
+  "itemgroup.vanillalayerplus": "Vanilla+ Layers"
 }
