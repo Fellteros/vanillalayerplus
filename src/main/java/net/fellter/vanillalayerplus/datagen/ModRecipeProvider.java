@@ -25,6 +25,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         layerBlockRecipe(ModBlocks.OAK_LAYER, Blocks.OAK_PLANKS).offerTo(exporter);
         layerBlockRecipe(ModBlocks.OAK_LOG_LAYER, Blocks.OAK_LOG).offerTo(exporter);
         layerBlockRecipe(ModBlocks.OAK_WOOD_LAYER, Blocks.OAK_WOOD).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.STR_OAK_LOG_LAYER, Blocks.STRIPPED_OAK_LOG).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.STR_OAK_WOOD_LAYER, Blocks.STRIPPED_OAK_WOOD).offerTo(exporter);
+
+        layerBlockRecipe(ModBlocks.SPRUCE_LAYER, Blocks.SPRUCE_PLANKS).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.SPRUCE_LOG_LAYER, Blocks.SPRUCE_LOG).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.SPRUCE_WOOD_LAYER, Blocks.SPRUCE_WOOD).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.STR_SPRUCE_LOG_LAYER, Blocks.STRIPPED_SPRUCE_LOG).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.STR_SPRUCE_WOOD_LAYER, Blocks.STRIPPED_SPRUCE_WOOD).offerTo(exporter);
     }
 
     public static CraftingRecipeJsonBuilder layerBlockRecipe(ItemConvertible output, ItemConvertible input) {

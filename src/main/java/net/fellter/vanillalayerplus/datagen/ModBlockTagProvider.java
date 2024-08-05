@@ -20,6 +20,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.OAK_LAYER)
                 .add(ModBlocks.OAK_LOG_LAYER)
-                .add(ModBlocks.OAK_WOOD_LAYER);
+                .add(ModBlocks.OAK_WOOD_LAYER)
+                .add(ModBlocks.STR_OAK_LOG_LAYER)
+                .add(ModBlocks.STR_OAK_WOOD_LAYER)
+                .add(ModBlocks.SPRUCE_LAYER)
+                .add(ModBlocks.SPRUCE_LOG_LAYER)
+                .add(ModBlocks.SPRUCE_WOOD_LAYER)
+                .add(ModBlocks.STR_SPRUCE_LOG_LAYER)
+                .add(ModBlocks.STR_SPRUCE_WOOD_LAYER);
     }
 }

@@ -27,6 +27,14 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.OAK_LAYER, layerDrops(ModBlocks.OAK_LAYER));
         addDrop(ModBlocks.OAK_LOG_LAYER, layerDrops(ModBlocks.OAK_LOG_LAYER));
         addDrop(ModBlocks.OAK_WOOD_LAYER, layerDrops(ModBlocks.OAK_WOOD_LAYER));
+        addDrop(ModBlocks.STR_OAK_LOG_LAYER, layerDrops(ModBlocks.STR_OAK_LOG_LAYER));
+        addDrop(ModBlocks.STR_OAK_WOOD_LAYER, layerDrops(ModBlocks.STR_OAK_WOOD_LAYER));
+
+        addDrop(ModBlocks.SPRUCE_LAYER, layerDrops(ModBlocks.SPRUCE_LAYER));
+        addDrop(ModBlocks.SPRUCE_LOG_LAYER, layerDrops(ModBlocks.SPRUCE_LOG_LAYER));
+        addDrop(ModBlocks.SPRUCE_WOOD_LAYER, layerDrops(ModBlocks.SPRUCE_WOOD_LAYER));
+        addDrop(ModBlocks.STR_SPRUCE_LOG_LAYER, layerDrops(ModBlocks.STR_SPRUCE_LOG_LAYER));
+        addDrop(ModBlocks.STR_SPRUCE_WOOD_LAYER, layerDrops(ModBlocks.STR_SPRUCE_WOOD_LAYER));
     }
 
 

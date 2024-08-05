@@ -72,7 +72,7 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return FLOOR_LAYERS_TO_SHAPE[state.get(LAYERS) - 1];
+        return FLOOR_LAYERS_TO_SHAPE[state.get(LAYERS)];
     }
 
     @Override

@@ -2,6 +2,14 @@
   "block.vanillalayerplus.oak_layer": "Oak Layer",
   "block.vanillalayerplus.oak_log_layer": "Oak Log Layer",
   "block.vanillalayerplus.oak_wood_layer": "Oak Wood Layer",
+  "block.vanillalayerplus.str_oak_log_layer": "Stripped Oak Log Layer",
+  "block.vanillalayerplus.str_oak_wood_layer": "Stripped Oak Wood Layer",
+  
+  "block.vanillalayerplus.spruce_layer": "Spruce Layer",
+  "block.vanillalayerplus.spruce_log_layer": "Spruce Log Layer",
+  "block.vanillalayerplus.spruce_wood_layer": "Spruce Wood Layer",
+  "block.vanillalayerplus.str_spruce_log_layer": "Stripped Spruce Log Layer",
+  "block.vanillalayerplus.str_spruce_wood_layer": "Stripped Spruce Wood Layer",
 
   "itemgroup.vanillalayerplus": "Vanilla+ Layers"
 }

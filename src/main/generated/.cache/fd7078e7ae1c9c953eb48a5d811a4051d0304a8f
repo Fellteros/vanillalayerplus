@@ -1,4 +1,11 @@
-// 1.21	2024-08-04T14:44:23.4199803	vanillalayerplus/Block Loot Tables
+// 1.21	2024-08-05T10:06:43.972599	vanillalayerplus/Block Loot Tables
+55af8a890502241dafa10b9d69221f8316b5408f data\vanillalayerplus\loot_table\blocks\spruce_wood_layer.json
+3c09701f2293d90e86cfefd3551a222d549dd0a8 data\vanillalayerplus\loot_table\blocks\str_oak_log_layer.json
+60f95696db7c7eb837689b1b2bc1aa3d1e431fd5 data\vanillalayerplus\loot_table\blocks\spruce_layer.json
+29f73f51ea1915d7bf5e19cddf15c3fc4bed1411 data\vanillalayerplus\loot_table\blocks\str_oak_wood_layer.json
 e4325daa2f07645b8254274330446ca1650e11d9 data\vanillalayerplus\loot_table\blocks\oak_layer.json
 edc39612af72c469a2f13d4449c6fa656d82fdcc data\vanillalayerplus\loot_table\blocks\oak_wood_layer.json
+891569ac7de6cd0d76b88b9f6d4ad945d839df75 data\vanillalayerplus\loot_table\blocks\str_spruce_wood_layer.json
+9a2357583dd253f41f7db7b1efb07bfd99dc9b94 data\vanillalayerplus\loot_table\blocks\str_spruce_log_layer.json
 d49d46f091241c9889f4ad7afe05d43b86b9b348 data\vanillalayerplus\loot_table\blocks\oak_log_layer.json
+1920776529ae59de082f554e6b3e1c6872bf9ffc data\vanillalayerplus\loot_table\blocks\spruce_log_layer.json

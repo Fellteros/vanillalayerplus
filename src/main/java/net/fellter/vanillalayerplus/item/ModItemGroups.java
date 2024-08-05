@@ -20,6 +20,14 @@ public class ModItemGroups {
                         entries.add(ModBlocks.OAK_LAYER);
                         entries.add(ModBlocks.OAK_LOG_LAYER);
                         entries.add(ModBlocks.OAK_WOOD_LAYER);
+                        entries.add(ModBlocks.STR_OAK_LOG_LAYER);
+                        entries.add(ModBlocks.STR_OAK_WOOD_LAYER);
+
+                        entries.add(ModBlocks.SPRUCE_LAYER);
+                        entries.add(ModBlocks.SPRUCE_LOG_LAYER);
+                        entries.add(ModBlocks.SPRUCE_WOOD_LAYER);
+                        entries.add(ModBlocks.STR_SPRUCE_LOG_LAYER);
+                        entries.add(ModBlocks.STR_SPRUCE_WOOD_LAYER);
 
                     }).build());
 

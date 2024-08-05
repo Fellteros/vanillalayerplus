@@ -2,6 +2,13 @@
   "values": [
     "vanillalayerplus:oak_layer",
     "vanillalayerplus:oak_log_layer",
-    "vanillalayerplus:oak_wood_layer"
+    "vanillalayerplus:oak_wood_layer",
+    "vanillalayerplus:str_oak_log_layer",
+    "vanillalayerplus:str_oak_wood_layer",
+    "vanillalayerplus:spruce_layer",
+    "vanillalayerplus:spruce_log_layer",
+    "vanillalayerplus:spruce_wood_layer",
+    "vanillalayerplus:str_spruce_log_layer",
+    "vanillalayerplus:str_spruce_wood_layer"
   ]
 }
