@@ -29,6 +29,47 @@ public class ModItemGroups {
                         entries.add(ModBlocks.STR_SPRUCE_LOG_LAYER);
                         entries.add(ModBlocks.STR_SPRUCE_WOOD_LAYER);
 
+                        entries.add(ModBlocks.BIRCH_LAYER);
+                        entries.add(ModBlocks.BIRCH_LOG_LAYER);
+                        entries.add(ModBlocks.BIRCH_WOOD_LAYER);
+                        entries.add(ModBlocks.STR_BIRCH_LOG_LAYER);
+                        entries.add(ModBlocks.STR_BIRCH_WOOD_LAYER);
+
+                        entries.add(ModBlocks.JUNGLE_LAYER);
+                        entries.add(ModBlocks.JUNGLE_LOG_LAYER);
+                        entries.add(ModBlocks.JUNGLE_WOOD_LAYER);
+                        entries.add(ModBlocks.STR_JUNGLE_LOG_LAYER);
+                        entries.add(ModBlocks.STR_JUNGLE_WOOD_LAYER);
+
+                        entries.add(ModBlocks.ACACIA_LAYER);
+                        entries.add(ModBlocks.ACACIA_LOG_LAYER);
+                        entries.add(ModBlocks.ACACIA_WOOD_LAYER);
+                        entries.add(ModBlocks.STR_ACACIA_LOG_LAYER);
+                        entries.add(ModBlocks.STR_ACACIA_WOOD_LAYER);
+
+                        entries.add(ModBlocks.DARK_OAK_LAYER);
+                        entries.add(ModBlocks.DARK_OAK_LOG_LAYER);
+                        entries.add(ModBlocks.DARK_OAK_WOOD_LAYER);
+                        entries.add(ModBlocks.STR_DARK_OAK_LOG_LAYER);
+                        entries.add(ModBlocks.STR_DARK_OAK_WOOD_LAYER);
+
+                        entries.add(ModBlocks.MANGROVE_LAYER);
+                        entries.add(ModBlocks.MANGROVE_LOG_LAYER);
+                        entries.add(ModBlocks.MANGROVE_WOOD_LAYER);
+                        entries.add(ModBlocks.STR_MANGROVE_LOG_LAYER);
+                        entries.add(ModBlocks.STR_MANGROVE_WOOD_LAYER);
+
+                        entries.add(ModBlocks.CHERRY_LAYER);
+                        entries.add(ModBlocks.CHERRY_LOG_LAYER);
+                        entries.add(ModBlocks.CHERRY_WOOD_LAYER);
+                        entries.add(ModBlocks.STR_CHERRY_LOG_LAYER);
+                        entries.add(ModBlocks.STR_CHERRY_WOOD_LAYER);
+
+                        entries.add(ModBlocks.BAMBOO_LAYER);
+                        entries.add(ModBlocks.BAMBOO_MOSAIC_LAYER);
+                        entries.add(ModBlocks.BAMBOO_BLOCK_LAYER);
+                        entries.add(ModBlocks.STR_BAMBOO_BLOCK_LAYER);
+
                     }).build());
 
 

@@ -16,7 +16,8 @@ public class StrippableBlocksRegistry {
         if (old != null) {
             LOGGER.debug("Replaced old stripping mapping from {} to {} with {}", input, old, stripped);
         }
-    }@SuppressWarnings("unstable")
+    }
+    @SuppressWarnings("unstable")
     private static Map<Block, Block> getRegistry() {
         return ImmutableCollectionUtils.getAsMutableMap(AxeItemAccessor::getStrippedBlocks, AxeItemAccessor::setStrippedBlocks);
     }
@@ -24,6 +25,30 @@ public class StrippableBlocksRegistry {
 
 
     public static void registerStrippableBlocks() {
-        StrippableBlocksRegistry.register(ModBlocks.OAK_LOG_LAYER, ModBlocks.OAK_WOOD_LAYER);
+        StrippableBlocksRegistry.register(ModBlocks.OAK_LOG_LAYER, ModBlocks.STR_OAK_LOG_LAYER);
+        StrippableBlocksRegistry.register(ModBlocks.OAK_WOOD_LAYER, ModBlocks.STR_OAK_WOOD_LAYER);
+
+        StrippableBlocksRegistry.register(ModBlocks.SPRUCE_LOG_LAYER, ModBlocks.STR_SPRUCE_LOG_LAYER);
+        StrippableBlocksRegistry.register(ModBlocks.SPRUCE_WOOD_LAYER, ModBlocks.STR_SPRUCE_WOOD_LAYER);
+
+        StrippableBlocksRegistry.register(ModBlocks.BIRCH_LOG_LAYER, ModBlocks.STR_BIRCH_LOG_LAYER);
+        StrippableBlocksRegistry.register(ModBlocks.BIRCH_WOOD_LAYER, ModBlocks.STR_BIRCH_WOOD_LAYER);
+
+        StrippableBlocksRegistry.register(ModBlocks.JUNGLE_LOG_LAYER, ModBlocks.STR_JUNGLE_LOG_LAYER);
+        StrippableBlocksRegistry.register(ModBlocks.JUNGLE_WOOD_LAYER, ModBlocks.STR_JUNGLE_WOOD_LAYER);
+
+        StrippableBlocksRegistry.register(ModBlocks.ACACIA_LOG_LAYER, ModBlocks.STR_ACACIA_LOG_LAYER);
+        StrippableBlocksRegistry.register(ModBlocks.ACACIA_WOOD_LAYER, ModBlocks.STR_ACACIA_WOOD_LAYER);
+
+        StrippableBlocksRegistry.register(ModBlocks.DARK_OAK_LOG_LAYER, ModBlocks.STR_DARK_OAK_LOG_LAYER);
+        StrippableBlocksRegistry.register(ModBlocks.DARK_OAK_WOOD_LAYER, ModBlocks.STR_DARK_OAK_WOOD_LAYER);
+
+        StrippableBlocksRegistry.register(ModBlocks.MANGROVE_LOG_LAYER, ModBlocks.STR_MANGROVE_LOG_LAYER);
+        StrippableBlocksRegistry.register(ModBlocks.MANGROVE_WOOD_LAYER, ModBlocks.STR_MANGROVE_WOOD_LAYER);
+
+        StrippableBlocksRegistry.register(ModBlocks.CHERRY_LOG_LAYER, ModBlocks.STR_CHERRY_LOG_LAYER);
+        StrippableBlocksRegistry.register(ModBlocks.CHERRY_WOOD_LAYER, ModBlocks.STR_CHERRY_WOOD_LAYER);
+
+        StrippableBlocksRegistry.register(ModBlocks.BAMBOO_BLOCK_LAYER, ModBlocks.STR_BAMBOO_BLOCK_LAYER);
     }
 }

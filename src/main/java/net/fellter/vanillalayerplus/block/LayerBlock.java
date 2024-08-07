@@ -26,7 +26,6 @@ import java.util.Objects;
 
 public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
     public static final DirectionProperty FACING = Properties.FACING;
-    public static final EnumProperty<BlockFace> FACE = Properties.BLOCK_FACE;
     public static final IntProperty LAYERS = Properties.LAYERS;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     protected static final VoxelShape[] FLOOR_LAYERS_TO_SHAPE;
@@ -158,7 +157,7 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(LAYERS, WATERLOGGED, FACING, FACE);
+        builder.add(LAYERS, WATERLOGGED, FACING);
     }
 
     protected FluidState getFluidState(BlockState state) {

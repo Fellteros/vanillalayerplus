@@ -1,5 +1,6 @@
 package net.fellter.vanillalayerplus.util;
 
+import net.fellter.vanillalayerplus.VanillaLayerPlus;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.util.Identifier;
@@ -18,10 +19,10 @@ public class ModModels {
 
 
     private static Model block(String parent, TextureKey... requiredTextureKeys) {
-        return new Model(Optional.of(Identifier.of("vanillalayerplus", "blockmodels/" + parent)), Optional.empty(), requiredTextureKeys);
+        return new Model(Optional.of(Identifier.of(VanillaLayerPlus.MOD_ID, "blockmodels/" + parent)), Optional.empty(), requiredTextureKeys);
     }
 
     private static Model block(String parent, String variant, TextureKey ... requiredTextureKeys) {
-        return new Model(Optional.of(Identifier.of("vanillalayerplus", "blockmodels/" + parent)), Optional.of(variant), requiredTextureKeys);
+        return new Model(Optional.of(Identifier.of(VanillaLayerPlus.MOD_ID, "blockmodels/" + parent)), Optional.of(variant), requiredTextureKeys);
     }
 }

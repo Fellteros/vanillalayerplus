@@ -35,6 +35,47 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SPRUCE_WOOD_LAYER, layerDrops(ModBlocks.SPRUCE_WOOD_LAYER));
         addDrop(ModBlocks.STR_SPRUCE_LOG_LAYER, layerDrops(ModBlocks.STR_SPRUCE_LOG_LAYER));
         addDrop(ModBlocks.STR_SPRUCE_WOOD_LAYER, layerDrops(ModBlocks.STR_SPRUCE_WOOD_LAYER));
+
+        addDrop(ModBlocks.BIRCH_LAYER, layerDrops(ModBlocks.BIRCH_LAYER));
+        addDrop(ModBlocks.BIRCH_LOG_LAYER, layerDrops(ModBlocks.BIRCH_LOG_LAYER));
+        addDrop(ModBlocks.BIRCH_WOOD_LAYER, layerDrops(ModBlocks.BIRCH_WOOD_LAYER));
+        addDrop(ModBlocks.STR_BIRCH_LOG_LAYER, layerDrops(ModBlocks.STR_BIRCH_LOG_LAYER));
+        addDrop(ModBlocks.STR_BIRCH_WOOD_LAYER, layerDrops(ModBlocks.STR_BIRCH_WOOD_LAYER));
+
+        addDrop(ModBlocks.JUNGLE_LAYER, layerDrops(ModBlocks.JUNGLE_LAYER));
+        addDrop(ModBlocks.JUNGLE_LOG_LAYER, layerDrops(ModBlocks.JUNGLE_LOG_LAYER));
+        addDrop(ModBlocks.JUNGLE_WOOD_LAYER, layerDrops(ModBlocks.JUNGLE_WOOD_LAYER));
+        addDrop(ModBlocks.STR_JUNGLE_LOG_LAYER, layerDrops(ModBlocks.STR_JUNGLE_LOG_LAYER));
+        addDrop(ModBlocks.STR_JUNGLE_WOOD_LAYER, layerDrops(ModBlocks.STR_JUNGLE_WOOD_LAYER));
+
+        addDrop(ModBlocks.ACACIA_LAYER, layerDrops(ModBlocks.ACACIA_LAYER));
+        addDrop(ModBlocks.ACACIA_LOG_LAYER, layerDrops(ModBlocks.ACACIA_LOG_LAYER));
+        addDrop(ModBlocks.ACACIA_WOOD_LAYER, layerDrops(ModBlocks.ACACIA_WOOD_LAYER));
+        addDrop(ModBlocks.STR_ACACIA_LOG_LAYER, layerDrops(ModBlocks.STR_ACACIA_LOG_LAYER));
+        addDrop(ModBlocks.STR_ACACIA_WOOD_LAYER, layerDrops(ModBlocks.STR_ACACIA_WOOD_LAYER));
+
+        addDrop(ModBlocks.DARK_OAK_LAYER, layerDrops(ModBlocks.DARK_OAK_LAYER));
+        addDrop(ModBlocks.DARK_OAK_LOG_LAYER, layerDrops(ModBlocks.DARK_OAK_LOG_LAYER));
+        addDrop(ModBlocks.DARK_OAK_WOOD_LAYER, layerDrops(ModBlocks.DARK_OAK_WOOD_LAYER));
+        addDrop(ModBlocks.STR_DARK_OAK_LOG_LAYER, layerDrops(ModBlocks.STR_DARK_OAK_LOG_LAYER));
+        addDrop(ModBlocks.STR_DARK_OAK_WOOD_LAYER, layerDrops(ModBlocks.STR_DARK_OAK_WOOD_LAYER));
+
+        addDrop(ModBlocks.MANGROVE_LAYER, layerDrops(ModBlocks.MANGROVE_LAYER));
+        addDrop(ModBlocks.MANGROVE_LOG_LAYER, layerDrops(ModBlocks.MANGROVE_LOG_LAYER));
+        addDrop(ModBlocks.MANGROVE_WOOD_LAYER, layerDrops(ModBlocks.MANGROVE_WOOD_LAYER));
+        addDrop(ModBlocks.STR_MANGROVE_LOG_LAYER, layerDrops(ModBlocks.STR_MANGROVE_LOG_LAYER));
+        addDrop(ModBlocks.STR_MANGROVE_WOOD_LAYER, layerDrops(ModBlocks.STR_MANGROVE_WOOD_LAYER));
+
+        addDrop(ModBlocks.CHERRY_LAYER, layerDrops(ModBlocks.CHERRY_LAYER));
+        addDrop(ModBlocks.CHERRY_LOG_LAYER, layerDrops(ModBlocks.CHERRY_LOG_LAYER));
+        addDrop(ModBlocks.CHERRY_WOOD_LAYER, layerDrops(ModBlocks.CHERRY_WOOD_LAYER));
+        addDrop(ModBlocks.STR_CHERRY_LOG_LAYER, layerDrops(ModBlocks.STR_CHERRY_LOG_LAYER));
+        addDrop(ModBlocks.STR_CHERRY_WOOD_LAYER, layerDrops(ModBlocks.STR_CHERRY_WOOD_LAYER));
+
+        addDrop(ModBlocks.BAMBOO_LAYER, layerDrops(ModBlocks.BAMBOO_LAYER));
+        addDrop(ModBlocks.BAMBOO_MOSAIC_LAYER, layerDrops(ModBlocks.BAMBOO_MOSAIC_LAYER));
+        addDrop(ModBlocks.BAMBOO_BLOCK_LAYER, layerDrops(ModBlocks.BAMBOO_BLOCK_LAYER));
+        addDrop(ModBlocks.STR_BAMBOO_BLOCK_LAYER, layerDrops(ModBlocks.STR_BAMBOO_BLOCK_LAYER));
     }
 
 
