@@ -71,17 +71,50 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return FLOOR_LAYERS_TO_SHAPE[state.get(LAYERS)];
+        Direction direction = state.get(FACING);
+        VoxelShape voxel;
+        switch (direction) {
+            case WEST -> voxel = WEST_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case EAST -> voxel = EAST_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case SOUTH -> voxel = SOUTH_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case NORTH -> voxel = NORTH_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case UP -> voxel = CEILING_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case DOWN -> voxel = FLOOR_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            default -> throw new MatchException(null, null);
+        }
+        return voxel;
     }
 
     @Override
     public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
-        return FLOOR_LAYERS_TO_SHAPE[state.get(LAYERS)];
+        Direction direction = state.get(FACING);
+        VoxelShape voxel;
+        switch (direction) {
+            case WEST -> voxel = WEST_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case EAST -> voxel = EAST_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case SOUTH -> voxel = SOUTH_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case NORTH -> voxel = NORTH_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case UP -> voxel = CEILING_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case DOWN -> voxel = FLOOR_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            default -> throw new MatchException(null, null);
+        }
+        return voxel;
     }
 
     @Override
     public VoxelShape getCameraCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return FLOOR_LAYERS_TO_SHAPE[state.get(LAYERS)];
+        Direction direction = state.get(FACING);
+        VoxelShape voxel;
+        switch (direction) {
+            case WEST -> voxel = WEST_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case EAST -> voxel = EAST_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case SOUTH -> voxel = SOUTH_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case NORTH -> voxel = NORTH_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case UP -> voxel = CEILING_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            case DOWN -> voxel = FLOOR_LAYERS_TO_SHAPE[state.get(LAYERS)];
+            default -> throw new MatchException(null, null);
+        }
+        return voxel;
     }
 
     @Override

@@ -1,2 +1,4 @@
-// 1.21	2024-08-05T18:47:48.5904384	vanillalayerplus/Tags for minecraft:block
-d9f83e794bca49a3e8dc464fe42c679859f4198d data\minecraft\tags\block\mineable\axe.json
+// 1.21	2024-08-21T15:26:10.1759038	vanillalayerplus/Tags for minecraft:block
+4ea1a812f79237b65d225f4999eae85ae5c36159 data\minecraft\tags\block\mineable\axe.json
+4423c196a9e4f737c62db3812d0b3d1c87502c11 data\minecraft\tags\block\mineable\pickaxe.json
+d3edf8181cdae9af8677204a297315a6e4b6eecd data\vanillalayerplus\tags\block\layers.json

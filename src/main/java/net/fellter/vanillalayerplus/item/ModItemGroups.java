@@ -70,6 +70,49 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BAMBOO_BLOCK_LAYER);
                         entries.add(ModBlocks.STR_BAMBOO_BLOCK_LAYER);
 
+                        entries.add(ModBlocks.CRIMSON_LAYER);
+                        entries.add(ModBlocks.CRIMSON_STEM_LAYER);
+                        entries.add(ModBlocks.CRIMSON_HYPHAE_LAYER);
+                        entries.add(ModBlocks.STR_CRIMSON_STEM_LAYER);
+                        entries.add(ModBlocks.STR_CRIMSON_HYPHAE_LAYER);
+
+                        entries.add(ModBlocks.WARPED_LAYER);
+                        entries.add(ModBlocks.WARPED_STEM_LAYER);
+                        entries.add(ModBlocks.WARPED_HYPHAE_LAYER);
+                        entries.add(ModBlocks.STR_WARPED_STEM_LAYER);
+                        entries.add(ModBlocks.STR_WARPED_HYPHAE_LAYER);
+
+                        entries.add(ModBlocks.STONE_LAYER);
+                        entries.add(ModBlocks.COBBLESTONE_LAYER);
+                        entries.add(ModBlocks.MOSSY_COBBLESTONE_LAYER);
+                        entries.add(ModBlocks.SMOOTH_STONE_LAYER);
+                        entries.add(ModBlocks.STONE_BRICKS_LAYER);
+                        entries.add(ModBlocks.CRACKED_STONE_BRICKS_LAYER);
+                        entries.add(ModBlocks.CHISELED_STONE_BRICKS_LAYER);
+                        entries.add(ModBlocks.MOSSY_STONE_BRICKS_LAYER);
+
+                        entries.add(ModBlocks.GRANITE_LAYER);
+                        entries.add(ModBlocks.POLISHED_GRANITE_LAYER);
+                        entries.add(ModBlocks.DIORITE_LAYER);
+                        entries.add(ModBlocks.POLISHED_DIORITE_LAYER);
+                        entries.add(ModBlocks.ANDESITE_LAYER);
+                        entries.add(ModBlocks.POLISHED_ANDESITE_LAYER);
+                        
+                        entries.add(ModBlocks.DEEPSLATE_LAYER);
+                        entries.add(ModBlocks.COBBLED_DEEPSLATE_LAYER);
+                        entries.add(ModBlocks.CHISELED_DEEPSLATE_LAYER);
+                        entries.add(ModBlocks.POLISHED_DEEPSLATE_LAYER);
+                        entries.add(ModBlocks.DEEPSLATE_BRICKS_LAYER);
+                        entries.add(ModBlocks.CRACKED_DEEPSLATE_BRICKS_LAYER);
+                        entries.add(ModBlocks.DEEPSLATE_TILES_LAYER);
+                        entries.add(ModBlocks.CRACKED_DEEPSLATE_TILES_LAYER);
+                        
+                        entries.add(ModBlocks.TUFF_LAYER);
+                        entries.add(ModBlocks.CHISELED_TUFF_LAYER);
+                        entries.add(ModBlocks.POLISHED_TUFF_LAYER);
+                        entries.add(ModBlocks.TUFF_BRICKS_LAYER);
+                        entries.add(ModBlocks.CHISELED_TUFF_BRICKS_LAYER);
+
                     }).build());
 
 

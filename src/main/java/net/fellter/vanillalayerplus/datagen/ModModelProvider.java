@@ -73,6 +73,49 @@ public class ModModelProvider extends FabricModelProvider {
         registerLayerBlock(ModBlocks.BAMBOO_MOSAIC_LAYER, Blocks.BAMBOO_MOSAIC, bsmg, TextureMap.all(Blocks.BAMBOO_MOSAIC));
         registerLayerBlock(ModBlocks.BAMBOO_BLOCK_LAYER, Blocks.BAMBOO_BLOCK, bsmg, ModTextureMap.blockAndTopForEnds(Blocks.BAMBOO_BLOCK), ModTextureMap.blockAndTopForEnds(Blocks.BAMBOO_BLOCK));
         registerLayerBlock(ModBlocks.STR_BAMBOO_BLOCK_LAYER, Blocks.STRIPPED_BAMBOO_BLOCK, bsmg, ModTextureMap.blockAndTopForEnds(Blocks.STRIPPED_BAMBOO_BLOCK), ModTextureMap.blockAndTopForEnds(Blocks.STRIPPED_BAMBOO_BLOCK));
+
+        registerLayerBlock(ModBlocks.CRIMSON_LAYER, Blocks.CRIMSON_PLANKS, bsmg, TextureMap.all(Blocks.CRIMSON_PLANKS));
+        registerLayerBlock(ModBlocks.CRIMSON_STEM_LAYER, Blocks.CRIMSON_STEM, bsmg, ModTextureMap.blockAndTopForEnds(Blocks.CRIMSON_STEM), ModTextureMap.blockAndTopForEnds(Blocks.CRIMSON_STEM));
+        registerLayerBlock(ModBlocks.CRIMSON_HYPHAE_LAYER, Blocks.CRIMSON_HYPHAE, bsmg, TextureMap.all(Blocks.CRIMSON_STEM), TextureMap.all(Blocks.CRIMSON_STEM));
+        registerLayerBlock(ModBlocks.STR_CRIMSON_STEM_LAYER, Blocks.STRIPPED_CRIMSON_STEM, bsmg, ModTextureMap.blockAndTopForEnds(Blocks.STRIPPED_CRIMSON_STEM), ModTextureMap.blockAndTopForEnds(Blocks.STRIPPED_CRIMSON_STEM));
+        registerLayerBlock(ModBlocks.STR_CRIMSON_HYPHAE_LAYER, Blocks.STRIPPED_CRIMSON_HYPHAE, bsmg, TextureMap.all(Blocks.STRIPPED_CRIMSON_STEM), TextureMap.all(Blocks.STRIPPED_CRIMSON_STEM));
+
+        registerLayerBlock(ModBlocks.WARPED_LAYER, Blocks.WARPED_PLANKS, bsmg, TextureMap.all(Blocks.WARPED_PLANKS));
+        registerLayerBlock(ModBlocks.WARPED_STEM_LAYER, Blocks.WARPED_STEM, bsmg, ModTextureMap.blockAndTopForEnds(Blocks.WARPED_STEM), ModTextureMap.blockAndTopForEnds(Blocks.WARPED_STEM));
+        registerLayerBlock(ModBlocks.WARPED_HYPHAE_LAYER, Blocks.WARPED_HYPHAE, bsmg, TextureMap.all(Blocks.WARPED_STEM), TextureMap.all(Blocks.WARPED_STEM));
+        registerLayerBlock(ModBlocks.STR_WARPED_STEM_LAYER, Blocks.STRIPPED_WARPED_STEM, bsmg, ModTextureMap.blockAndTopForEnds(Blocks.STRIPPED_WARPED_STEM), ModTextureMap.blockAndTopForEnds(Blocks.STRIPPED_WARPED_STEM));
+        registerLayerBlock(ModBlocks.STR_WARPED_HYPHAE_LAYER, Blocks.STRIPPED_WARPED_HYPHAE, bsmg, TextureMap.all(Blocks.STRIPPED_WARPED_STEM), TextureMap.all(Blocks.STRIPPED_WARPED_STEM));
+
+        registerLayerBlock(ModBlocks.STONE_LAYER, Blocks.STONE, bsmg, TextureMap.all(Blocks.STONE));
+        registerLayerBlock(ModBlocks.COBBLESTONE_LAYER, Blocks.COBBLESTONE, bsmg, TextureMap.all(Blocks.COBBLESTONE));
+        registerLayerBlock(ModBlocks.MOSSY_COBBLESTONE_LAYER, Blocks.MOSSY_COBBLESTONE, bsmg, TextureMap.all(Blocks.MOSSY_COBBLESTONE));
+        registerLayerBlock(ModBlocks.SMOOTH_STONE_LAYER, Blocks.SMOOTH_STONE, bsmg, TextureMap.all(Blocks.SMOOTH_STONE));
+        registerLayerBlock(ModBlocks.STONE_BRICKS_LAYER, Blocks.STONE_BRICKS, bsmg, TextureMap.all(Blocks.STONE_BRICKS));
+        registerLayerBlock(ModBlocks.CRACKED_STONE_BRICKS_LAYER, Blocks.CRACKED_STONE_BRICKS, bsmg, TextureMap.all(Blocks.CRACKED_STONE_BRICKS));
+        registerLayerBlock(ModBlocks.CHISELED_STONE_BRICKS_LAYER, Blocks.CHISELED_STONE_BRICKS, bsmg, TextureMap.all(Blocks.CHISELED_STONE_BRICKS));
+        registerLayerBlock(ModBlocks.MOSSY_STONE_BRICKS_LAYER, Blocks.MOSSY_STONE_BRICKS, bsmg, TextureMap.all(Blocks.MOSSY_STONE_BRICKS));
+
+        registerLayerBlock(ModBlocks.GRANITE_LAYER, Blocks.GRANITE, bsmg, TextureMap.all(Blocks.GRANITE));
+        registerLayerBlock(ModBlocks.POLISHED_GRANITE_LAYER, Blocks.POLISHED_GRANITE, bsmg, TextureMap.all(Blocks.POLISHED_GRANITE));
+        registerLayerBlock(ModBlocks.DIORITE_LAYER, Blocks.DIORITE, bsmg, TextureMap.all(Blocks.DIORITE));
+        registerLayerBlock(ModBlocks.POLISHED_DIORITE_LAYER, Blocks.POLISHED_DIORITE, bsmg, TextureMap.all(Blocks.POLISHED_DIORITE));
+        registerLayerBlock(ModBlocks.ANDESITE_LAYER, Blocks.ANDESITE, bsmg, TextureMap.all(Blocks.ANDESITE));
+        registerLayerBlock(ModBlocks.POLISHED_ANDESITE_LAYER, Blocks.POLISHED_ANDESITE, bsmg, TextureMap.all(Blocks.POLISHED_ANDESITE));
+        
+        registerLayerBlock(ModBlocks.DEEPSLATE_LAYER, Blocks.DEEPSLATE, bsmg, ModTextureMap.blockAndTopForEnds(Blocks.DEEPSLATE), ModTextureMap.blockAndTopForEnds(Blocks.DEEPSLATE));
+        registerLayerBlock(ModBlocks.COBBLED_DEEPSLATE_LAYER, Blocks.COBBLED_DEEPSLATE, bsmg, TextureMap.all(Blocks.COBBLED_DEEPSLATE));
+        registerLayerBlock(ModBlocks.CHISELED_DEEPSLATE_LAYER, Blocks.CHISELED_DEEPSLATE, bsmg, TextureMap.all(Blocks.CHISELED_DEEPSLATE));
+        registerLayerBlock(ModBlocks.POLISHED_DEEPSLATE_LAYER, Blocks.POLISHED_DEEPSLATE, bsmg, TextureMap.all(Blocks.POLISHED_DEEPSLATE));
+        registerLayerBlock(ModBlocks.DEEPSLATE_BRICKS_LAYER, Blocks.DEEPSLATE_BRICKS, bsmg, TextureMap.all(Blocks.DEEPSLATE_BRICKS));
+        registerLayerBlock(ModBlocks.CRACKED_DEEPSLATE_BRICKS_LAYER, Blocks.CRACKED_DEEPSLATE_BRICKS, bsmg, TextureMap.all(Blocks.CRACKED_DEEPSLATE_BRICKS));
+        registerLayerBlock(ModBlocks.DEEPSLATE_TILES_LAYER, Blocks.DEEPSLATE_TILES, bsmg, TextureMap.all(Blocks.DEEPSLATE_TILES));
+        registerLayerBlock(ModBlocks.CRACKED_DEEPSLATE_TILES_LAYER, Blocks.CRACKED_DEEPSLATE_TILES, bsmg, TextureMap.all(Blocks.CRACKED_DEEPSLATE_TILES));
+        
+        registerLayerBlock(ModBlocks.TUFF_LAYER, Blocks.TUFF, bsmg, TextureMap.all(Blocks.TUFF));
+        registerLayerBlock(ModBlocks.CHISELED_TUFF_LAYER, Blocks.CHISELED_TUFF, bsmg, ModTextureMap.blockAndTopForEnds(Blocks.CHISELED_TUFF), ModTextureMap.blockAndTopForEnds(Blocks.CHISELED_TUFF));
+        registerLayerBlock(ModBlocks.POLISHED_TUFF_LAYER, Blocks.POLISHED_TUFF, bsmg, TextureMap.all(Blocks.POLISHED_TUFF));
+        registerLayerBlock(ModBlocks.TUFF_BRICKS_LAYER, Blocks.TUFF_BRICKS, bsmg, TextureMap.all(Blocks.TUFF_BRICKS));
+        registerLayerBlock(ModBlocks.CHISELED_TUFF_BRICKS_LAYER, Blocks.CHISELED_TUFF_BRICKS, bsmg, ModTextureMap.blockAndTopForEnds(Blocks.CHISELED_TUFF_BRICKS), ModTextureMap.blockAndTopForEnds(Blocks.CHISELED_TUFF_BRICKS));
     }
 
     @Override

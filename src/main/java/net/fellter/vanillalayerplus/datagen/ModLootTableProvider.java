@@ -76,6 +76,49 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BAMBOO_MOSAIC_LAYER, layerDrops(ModBlocks.BAMBOO_MOSAIC_LAYER));
         addDrop(ModBlocks.BAMBOO_BLOCK_LAYER, layerDrops(ModBlocks.BAMBOO_BLOCK_LAYER));
         addDrop(ModBlocks.STR_BAMBOO_BLOCK_LAYER, layerDrops(ModBlocks.STR_BAMBOO_BLOCK_LAYER));
+
+        addDrop(ModBlocks.CRIMSON_LAYER, layerDrops(ModBlocks.CRIMSON_LAYER));
+        addDrop(ModBlocks.CRIMSON_STEM_LAYER, layerDrops(ModBlocks.CRIMSON_STEM_LAYER));
+        addDrop(ModBlocks.CRIMSON_HYPHAE_LAYER, layerDrops(ModBlocks.CRIMSON_HYPHAE_LAYER));
+        addDrop(ModBlocks.STR_CRIMSON_STEM_LAYER, layerDrops(ModBlocks.STR_CRIMSON_STEM_LAYER));
+        addDrop(ModBlocks.STR_CRIMSON_HYPHAE_LAYER, layerDrops(ModBlocks.STR_CRIMSON_HYPHAE_LAYER));
+
+        addDrop(ModBlocks.WARPED_LAYER, layerDrops(ModBlocks.WARPED_LAYER));
+        addDrop(ModBlocks.WARPED_STEM_LAYER, layerDrops(ModBlocks.WARPED_STEM_LAYER));
+        addDrop(ModBlocks.WARPED_HYPHAE_LAYER, layerDrops(ModBlocks.WARPED_HYPHAE_LAYER));
+        addDrop(ModBlocks.STR_WARPED_STEM_LAYER, layerDrops(ModBlocks.STR_WARPED_STEM_LAYER));
+        addDrop(ModBlocks.STR_WARPED_HYPHAE_LAYER, layerDrops(ModBlocks.STR_WARPED_HYPHAE_LAYER));
+
+        addDrop(ModBlocks.STONE_LAYER, layerDrops(ModBlocks.STONE_LAYER));
+        addDrop(ModBlocks.COBBLESTONE_LAYER, layerDrops(ModBlocks.COBBLESTONE_LAYER));
+        addDrop(ModBlocks.MOSSY_COBBLESTONE_LAYER, layerDrops(ModBlocks.MOSSY_COBBLESTONE_LAYER));
+        addDrop(ModBlocks.SMOOTH_STONE_LAYER, layerDrops(ModBlocks.SMOOTH_STONE_LAYER));
+        addDrop(ModBlocks.STONE_BRICKS_LAYER, layerDrops(ModBlocks.STONE_BRICKS_LAYER));
+        addDrop(ModBlocks.CRACKED_STONE_BRICKS_LAYER, layerDrops(ModBlocks.CRACKED_STONE_BRICKS_LAYER));
+        addDrop(ModBlocks.CHISELED_STONE_BRICKS_LAYER, layerDrops(ModBlocks.CHISELED_STONE_BRICKS_LAYER));
+        addDrop(ModBlocks.MOSSY_STONE_BRICKS_LAYER, layerDrops(ModBlocks.MOSSY_STONE_BRICKS_LAYER));
+
+        addDrop(ModBlocks.GRANITE_LAYER, layerDrops(ModBlocks.GRANITE_LAYER));
+        addDrop(ModBlocks.POLISHED_GRANITE_LAYER, layerDrops(ModBlocks.POLISHED_GRANITE_LAYER));
+        addDrop(ModBlocks.DIORITE_LAYER, layerDrops(ModBlocks.DIORITE_LAYER));
+        addDrop(ModBlocks.POLISHED_DIORITE_LAYER, layerDrops(ModBlocks.POLISHED_DIORITE_LAYER));
+        addDrop(ModBlocks.ANDESITE_LAYER, layerDrops(ModBlocks.ANDESITE_LAYER));
+        addDrop(ModBlocks.POLISHED_ANDESITE_LAYER, layerDrops(ModBlocks.POLISHED_ANDESITE_LAYER));
+        
+        addDrop(ModBlocks.DEEPSLATE_LAYER, layerDrops(ModBlocks.DEEPSLATE_LAYER));
+        addDrop(ModBlocks.COBBLED_DEEPSLATE_LAYER, layerDrops(ModBlocks.COBBLED_DEEPSLATE_LAYER));
+        addDrop(ModBlocks.CHISELED_DEEPSLATE_LAYER, layerDrops(ModBlocks.CHISELED_DEEPSLATE_LAYER));
+        addDrop(ModBlocks.POLISHED_DEEPSLATE_LAYER, layerDrops(ModBlocks.POLISHED_DEEPSLATE_LAYER));
+        addDrop(ModBlocks.DEEPSLATE_BRICKS_LAYER, layerDrops(ModBlocks.DEEPSLATE_BRICKS_LAYER));
+        addDrop(ModBlocks.CRACKED_DEEPSLATE_BRICKS_LAYER, layerDrops(ModBlocks.CRACKED_DEEPSLATE_BRICKS_LAYER));
+        addDrop(ModBlocks.DEEPSLATE_TILES_LAYER, layerDrops(ModBlocks.DEEPSLATE_TILES_LAYER));
+        addDrop(ModBlocks.CRACKED_DEEPSLATE_TILES_LAYER, layerDrops(ModBlocks.CRACKED_DEEPSLATE_TILES_LAYER));
+        
+        addDrop(ModBlocks.TUFF_LAYER, layerDrops(ModBlocks.TUFF_LAYER));
+        addDrop(ModBlocks.CHISELED_TUFF_LAYER, layerDrops(ModBlocks.CHISELED_TUFF_LAYER));
+        addDrop(ModBlocks.POLISHED_TUFF_LAYER, layerDrops(ModBlocks.POLISHED_TUFF_LAYER));
+        addDrop(ModBlocks.TUFF_BRICKS_LAYER, layerDrops(ModBlocks.TUFF_BRICKS_LAYER));
+        addDrop(ModBlocks.CHISELED_TUFF_BRICKS_LAYER, layerDrops(ModBlocks.CHISELED_TUFF_BRICKS_LAYER));
     }
 
 

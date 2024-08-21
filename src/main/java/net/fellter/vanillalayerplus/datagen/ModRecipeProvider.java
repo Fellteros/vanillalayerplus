@@ -74,6 +74,49 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         layerBlockRecipe(ModBlocks.BAMBOO_MOSAIC_LAYER, Blocks.BAMBOO_MOSAIC).offerTo(exporter);
         layerBlockRecipe(ModBlocks.BAMBOO_BLOCK_LAYER, Blocks.BAMBOO_BLOCK).offerTo(exporter);
         layerBlockRecipe(ModBlocks.STR_BAMBOO_BLOCK_LAYER, Blocks.STRIPPED_BAMBOO_BLOCK).offerTo(exporter);
+
+        layerBlockRecipe(ModBlocks.CRIMSON_LAYER, Blocks.CRIMSON_PLANKS).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.CRIMSON_STEM_LAYER, Blocks.CRIMSON_STEM).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.CRIMSON_HYPHAE_LAYER, Blocks.CRIMSON_HYPHAE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.STR_CRIMSON_STEM_LAYER, Blocks.STRIPPED_CRIMSON_STEM).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.STR_CRIMSON_HYPHAE_LAYER, Blocks.STRIPPED_CRIMSON_HYPHAE).offerTo(exporter);
+
+        layerBlockRecipe(ModBlocks.WARPED_LAYER, Blocks.WARPED_PLANKS).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.WARPED_STEM_LAYER, Blocks.WARPED_STEM).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.WARPED_HYPHAE_LAYER, Blocks.WARPED_HYPHAE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.STR_WARPED_STEM_LAYER, Blocks.STRIPPED_WARPED_STEM).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.STR_WARPED_HYPHAE_LAYER, Blocks.STRIPPED_WARPED_HYPHAE).offerTo(exporter);
+
+        layerBlockRecipe(ModBlocks.STONE_LAYER, Blocks.STONE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.COBBLESTONE_LAYER, Blocks.COBBLESTONE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.MOSSY_COBBLESTONE_LAYER, Blocks.MOSSY_COBBLESTONE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.SMOOTH_STONE_LAYER, Blocks.SMOOTH_STONE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.STONE_BRICKS_LAYER, Blocks.STONE_BRICKS).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.CRACKED_STONE_BRICKS_LAYER, Blocks.CRACKED_STONE_BRICKS).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.CHISELED_STONE_BRICKS_LAYER, Blocks.CHISELED_STONE_BRICKS).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.MOSSY_STONE_BRICKS_LAYER, Blocks.MOSSY_STONE_BRICKS).offerTo(exporter);
+
+        layerBlockRecipe(ModBlocks.GRANITE_LAYER, Blocks.GRANITE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.POLISHED_GRANITE_LAYER, Blocks.POLISHED_GRANITE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.DIORITE_LAYER, Blocks.DIORITE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.POLISHED_DIORITE_LAYER, Blocks.POLISHED_DIORITE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.ANDESITE_LAYER, Blocks.ANDESITE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.POLISHED_ANDESITE_LAYER, Blocks.POLISHED_ANDESITE).offerTo(exporter);
+        
+        layerBlockRecipe(ModBlocks.DEEPSLATE_LAYER, Blocks.DEEPSLATE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.COBBLED_DEEPSLATE_LAYER, Blocks.COBBLED_DEEPSLATE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.CHISELED_DEEPSLATE_LAYER, Blocks.CHISELED_DEEPSLATE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.POLISHED_DEEPSLATE_LAYER, Blocks.POLISHED_DEEPSLATE).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.DEEPSLATE_BRICKS_LAYER, Blocks.DEEPSLATE_BRICKS).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.CRACKED_DEEPSLATE_BRICKS_LAYER, Blocks.CRACKED_DEEPSLATE_BRICKS).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.DEEPSLATE_TILES_LAYER, Blocks.DEEPSLATE_TILES).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.CRACKED_DEEPSLATE_TILES_LAYER, Blocks.CRACKED_DEEPSLATE_TILES).offerTo(exporter);
+        
+        layerBlockRecipe(ModBlocks.TUFF_LAYER, Blocks.TUFF).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.CHISELED_TUFF_LAYER, Blocks.CHISELED_TUFF).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.POLISHED_TUFF_LAYER, Blocks.POLISHED_TUFF).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.TUFF_BRICKS_LAYER, Blocks.TUFF_BRICKS).offerTo(exporter);
+        layerBlockRecipe(ModBlocks.CHISELED_TUFF_BRICKS_LAYER, Blocks.CHISELED_TUFF_BRICKS).offerTo(exporter);
     }
 
     public static CraftingRecipeJsonBuilder layerBlockRecipe(ItemConvertible output, ItemConvertible input) {

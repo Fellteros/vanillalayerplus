@@ -1,0 +1,31 @@
+{
+  "values": [
+    "vanillalayerplus:stone_layer",
+    "vanillalayerplus:cobblestone_layer",
+    "vanillalayerplus:mossy_cobblestone_layer",
+    "vanillalayerplus:smooth_stone_layer",
+    "vanillalayerplus:stone_bricks_layer",
+    "vanillalayerplus:cracked_stone_bricks_layer",
+    "vanillalayerplus:chiseled_stone_bricks_layer",
+    "vanillalayerplus:mossy_stone_bricks_layer",
+    "vanillalayerplus:granite_layer",
+    "vanillalayerplus:polished_granite_layer",
+    "vanillalayerplus:diorite_layer",
+    "vanillalayerplus:polished_diorite_layer",
+    "vanillalayerplus:andesite_layer",
+    "vanillalayerplus:polished_andesite_layer",
+    "vanillalayerplus:deepslate_layer",
+    "vanillalayerplus:cobbled_deepslate_layer",
+    "vanillalayerplus:chiseled_deepslate_layer",
+    "vanillalayerplus:polished_deepslate_layer",
+    "vanillalayerplus:deepslate_bricks_layer",
+    "vanillalayerplus:cracked_deepslate_bricks_layer",
+    "vanillalayerplus:deepslate_tiles_layer",
+    "vanillalayerplus:cracked_deepslate_tiles_layer",
+    "vanillalayerplus:tuff_layer",
+    "vanillalayerplus:chiseled_tuff_layer",
+    "vanillalayerplus:polished_tuff_layer",
+    "vanillalayerplus:tuff_bricks_layer",
+    "vanillalayerplus:chiseled_tuff_bricks_layer"
+  ]
+}

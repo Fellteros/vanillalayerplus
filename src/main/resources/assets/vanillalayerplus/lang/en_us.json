@@ -52,5 +52,48 @@
   "block.vanillalayerplus.bamboo_block_layer": "Bamboo Block Layer",
   "block.vanillalayerplus.str_bamboo_block_layer": "Stripped Bamboo Block Layer",
 
+  "block.vanillalayerplus.crimson_layer": "Crimson Layer",
+  "block.vanillalayerplus.crimson_stem_layer": "Crimson Stem Layer",
+  "block.vanillalayerplus.crimson_hyphae_layer": "Crimson Hyphae Layer",
+  "block.vanillalayerplus.str_crimson_stem_layer": "Stripped Crimson Stem Layer",
+  "block.vanillalayerplus.str_crimson_hyphae_layer": "Stripped Crimson Hyphae Layer",
+
+  "block.vanillalayerplus.warped_layer": "Warped Layer",
+  "block.vanillalayerplus.warped_stem_layer": "Warped Stem Layer",
+  "block.vanillalayerplus.warped_hyphae_layer": "Warped Hyphae Layer",
+  "block.vanillalayerplus.str_warped_stem_layer": "Stripped Warped Stem Layer",
+  "block.vanillalayerplus.str_warped_hyphae_layer": "Stripped Warped Hyphae Layer",
+
+  "block.vanillalayerplus.stone_layer": "Stone Layer",
+  "block.vanillalayerplus.cobblestone_layer": "Cobblestone Layer",
+  "block.vanillalayerplus.mossy_cobblestone_layer": "Mossy Cobblestone Layer",
+  "block.vanillalayerplus.smooth_stone_layer": "Smooth Stone Layer",
+  "block.vanillalayerplus.stone_bricks_layer": "Stone Brick Layer",
+  "block.vanillalayerplus.cracked_stone_bricks_layer": "Cracked Stone Brick Layer",
+  "block.vanillalayerplus.chiseled_stone_bricks_layer": "Chiseled Stone Brick Layer",
+  "block.vanillalayerplus.mossy_stone_bricks_layer": "Mossy Stone Brick Layer",
+
+  "block.vanillalayerplus.granite_layer": "Granite Layer",
+  "block.vanillalayerplus.polished_granite_layer": "Polished Granite Layer",
+  "block.vanillalayerplus.diorite_layer": "Diorite Layer",
+  "block.vanillalayerplus.polished_diorite_layer": "Polished Diorite Layer",
+  "block.vanillalayerplus.andesite_layer": "Andesite Layer",
+  "block.vanillalayerplus.polished_andesite_layer": "Polished Andesite Layer",
+  
+  "block.vanillalayerplus.deepslate_layer": "Deepslate Layer",
+  "block.vanillalayerplus.cobbled_deepslate_layer": "Cobbled Deepslate Layer",
+  "block.vanillalayerplus.chiseled_deepslate_layer": "Chiseled Deepslate Layer",
+  "block.vanillalayerplus.polished_deepslate_layer": "Polished Deepslate Layer",
+  "block.vanillalayerplus.deepslate_bricks_layer": "Deepslate Brick Layer",
+  "block.vanillalayerplus.cracked_deepslate_bricks_layer": "Cracked Deepslate Brick Layer",
+  "block.vanillalayerplus.deepslate_tiles_layer": "Deepslate Tile Layer",
+  "block.vanillalayerplus.cracked_deepslate_tiles_layer": "Cracked Deepslate Tile Layer",
+  
+  "block.vanillalayerplus.tuff_layer": "Tuff Layer",
+  "block.vanillalayerplus.chiseled_tuff_layer": "Chiseled Tuff Layer",
+  "block.vanillalayerplus.polished_tuff_layer": "Polished Tuff Layer",
+  "block.vanillalayerplus.tuff_bricks_layer": "Tuff Brick Layer",
+  "block.vanillalayerplus.chiseled_tuff_bricks_layer": "Chiseled Tuff Brick Layer",
+
   "itemgroup.vanillalayerplus": "Vanilla+ Layers"
 }

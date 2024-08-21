@@ -43,6 +43,16 @@
     "vanillalayerplus:bamboo_layer",
     "vanillalayerplus:bamboo_mosaic_layer",
     "vanillalayerplus:bamboo_block_layer",
-    "vanillalayerplus:str_bamboo_block_layer"
+    "vanillalayerplus:str_bamboo_block_layer",
+    "vanillalayerplus:crimson_layer",
+    "vanillalayerplus:crimson_stem_layer",
+    "vanillalayerplus:crimson_hyphae_layer",
+    "vanillalayerplus:str_crimson_stem_layer",
+    "vanillalayerplus:str_crimson_hyphae_layer",
+    "vanillalayerplus:warped_layer",
+    "vanillalayerplus:warped_stem_layer",
+    "vanillalayerplus:warped_hyphae_layer",
+    "vanillalayerplus:str_warped_stem_layer",
+    "vanillalayerplus:str_warped_hyphae_layer"
   ]
 }
