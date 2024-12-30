@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "minecraft:chiseled_tuff_bricks"
-    }
+    "W": "minecraft:chiseled_tuff_bricks"
   },
   "pattern": [
     " W",

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "minecraft:diorite"
-    }
+    "W": "minecraft:diorite"
   },
   "pattern": [
     " W",

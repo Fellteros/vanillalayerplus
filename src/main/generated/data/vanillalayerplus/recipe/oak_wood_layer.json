@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "minecraft:oak_wood"
-    }
+    "W": "minecraft:oak_wood"
   },
   "pattern": [
     " W",

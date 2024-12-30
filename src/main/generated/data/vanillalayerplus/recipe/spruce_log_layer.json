@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "minecraft:spruce_log"
-    }
+    "W": "minecraft:spruce_log"
   },
   "pattern": [
     " W",

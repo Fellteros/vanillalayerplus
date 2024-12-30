@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "minecraft:polished_tuff"
-    }
+    "W": "minecraft:polished_tuff"
   },
   "pattern": [
     " W",

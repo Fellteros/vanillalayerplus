@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "minecraft:bamboo_planks"
-    }
+    "W": "minecraft:bamboo_planks"
   },
   "pattern": [
     " W",

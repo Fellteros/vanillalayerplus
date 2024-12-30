@@ -1,0 +1,4 @@
+// 1.21.4	-999999999-01-01T00:00:00	Vanilla+ Layers/Tags for minecraft:block
+4fa2b0bd70d01fb6b93cb102eab28cf57ae6f20e data/minecraft/tags/block/mineable/axe.json
+4423c196a9e4f737c62db3812d0b3d1c87502c11 data/minecraft/tags/block/mineable/pickaxe.json
+bfd81a7da61a2405ddab052ad651a0bc0cdbf96e data/vanillalayerplus/tags/block/layers.json

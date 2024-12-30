@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "minecraft:polished_deepslate"
-    }
+    "W": "minecraft:polished_deepslate"
   },
   "pattern": [
     " W",

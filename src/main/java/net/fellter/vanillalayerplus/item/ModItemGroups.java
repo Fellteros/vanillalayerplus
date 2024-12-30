@@ -20,67 +20,73 @@ public class ModItemGroups {
                         entries.add(ModBlocks.OAK_LAYER);
                         entries.add(ModBlocks.OAK_LOG_LAYER);
                         entries.add(ModBlocks.OAK_WOOD_LAYER);
-                        entries.add(ModBlocks.STR_OAK_LOG_LAYER);
-                        entries.add(ModBlocks.STR_OAK_WOOD_LAYER);
+                        entries.add(ModBlocks.STRIPPED_OAK_LOG_LAYER);
+                        entries.add(ModBlocks.STRIPPED_OAK_WOOD_LAYER);
 
                         entries.add(ModBlocks.SPRUCE_LAYER);
                         entries.add(ModBlocks.SPRUCE_LOG_LAYER);
                         entries.add(ModBlocks.SPRUCE_WOOD_LAYER);
-                        entries.add(ModBlocks.STR_SPRUCE_LOG_LAYER);
-                        entries.add(ModBlocks.STR_SPRUCE_WOOD_LAYER);
+                        entries.add(ModBlocks.STRIPPED_SPRUCE_LOG_LAYER);
+                        entries.add(ModBlocks.STRIPPED_SPRUCE_WOOD_LAYER);
 
                         entries.add(ModBlocks.BIRCH_LAYER);
                         entries.add(ModBlocks.BIRCH_LOG_LAYER);
                         entries.add(ModBlocks.BIRCH_WOOD_LAYER);
-                        entries.add(ModBlocks.STR_BIRCH_LOG_LAYER);
-                        entries.add(ModBlocks.STR_BIRCH_WOOD_LAYER);
+                        entries.add(ModBlocks.STRIPPED_BIRCH_LOG_LAYER);
+                        entries.add(ModBlocks.STRIPPED_BIRCH_WOOD_LAYER);
 
                         entries.add(ModBlocks.JUNGLE_LAYER);
                         entries.add(ModBlocks.JUNGLE_LOG_LAYER);
                         entries.add(ModBlocks.JUNGLE_WOOD_LAYER);
-                        entries.add(ModBlocks.STR_JUNGLE_LOG_LAYER);
-                        entries.add(ModBlocks.STR_JUNGLE_WOOD_LAYER);
+                        entries.add(ModBlocks.STRIPPED_JUNGLE_LOG_LAYER);
+                        entries.add(ModBlocks.STRIPPED_JUNGLE_WOOD_LAYER);
 
                         entries.add(ModBlocks.ACACIA_LAYER);
                         entries.add(ModBlocks.ACACIA_LOG_LAYER);
                         entries.add(ModBlocks.ACACIA_WOOD_LAYER);
-                        entries.add(ModBlocks.STR_ACACIA_LOG_LAYER);
-                        entries.add(ModBlocks.STR_ACACIA_WOOD_LAYER);
+                        entries.add(ModBlocks.STRIPPED_ACACIA_LOG_LAYER);
+                        entries.add(ModBlocks.STRIPPED_ACACIA_WOOD_LAYER);
 
                         entries.add(ModBlocks.DARK_OAK_LAYER);
                         entries.add(ModBlocks.DARK_OAK_LOG_LAYER);
                         entries.add(ModBlocks.DARK_OAK_WOOD_LAYER);
-                        entries.add(ModBlocks.STR_DARK_OAK_LOG_LAYER);
-                        entries.add(ModBlocks.STR_DARK_OAK_WOOD_LAYER);
+                        entries.add(ModBlocks.STRIPPED_DARK_OAK_LOG_LAYER);
+                        entries.add(ModBlocks.STRIPPED_DARK_OAK_WOOD_LAYER);
 
                         entries.add(ModBlocks.MANGROVE_LAYER);
                         entries.add(ModBlocks.MANGROVE_LOG_LAYER);
                         entries.add(ModBlocks.MANGROVE_WOOD_LAYER);
-                        entries.add(ModBlocks.STR_MANGROVE_LOG_LAYER);
-                        entries.add(ModBlocks.STR_MANGROVE_WOOD_LAYER);
+                        entries.add(ModBlocks.STRIPPED_MANGROVE_LOG_LAYER);
+                        entries.add(ModBlocks.STRIPPED_MANGROVE_WOOD_LAYER);
 
                         entries.add(ModBlocks.CHERRY_LAYER);
                         entries.add(ModBlocks.CHERRY_LOG_LAYER);
                         entries.add(ModBlocks.CHERRY_WOOD_LAYER);
-                        entries.add(ModBlocks.STR_CHERRY_LOG_LAYER);
-                        entries.add(ModBlocks.STR_CHERRY_WOOD_LAYER);
+                        entries.add(ModBlocks.STRIPPED_CHERRY_LOG_LAYER);
+                        entries.add(ModBlocks.STRIPPED_CHERRY_WOOD_LAYER);
+
+                        entries.add(ModBlocks.PALE_OAK_LAYER);
+                        entries.add(ModBlocks.PALE_OAK_LOG_LAYER);
+                        entries.add(ModBlocks.PALE_OAK_WOOD_LAYER);
+                        entries.add(ModBlocks.STRIPPED_PALE_OAK_LOG_LAYER);
+                        entries.add(ModBlocks.STRIPPED_PALE_OAK_WOOD_LAYER);
 
                         entries.add(ModBlocks.BAMBOO_LAYER);
                         entries.add(ModBlocks.BAMBOO_MOSAIC_LAYER);
                         entries.add(ModBlocks.BAMBOO_BLOCK_LAYER);
-                        entries.add(ModBlocks.STR_BAMBOO_BLOCK_LAYER);
+                        entries.add(ModBlocks.STRIPPED_BAMBOO_BLOCK_LAYER);
 
                         entries.add(ModBlocks.CRIMSON_LAYER);
                         entries.add(ModBlocks.CRIMSON_STEM_LAYER);
                         entries.add(ModBlocks.CRIMSON_HYPHAE_LAYER);
-                        entries.add(ModBlocks.STR_CRIMSON_STEM_LAYER);
-                        entries.add(ModBlocks.STR_CRIMSON_HYPHAE_LAYER);
+                        entries.add(ModBlocks.STRIPPED_CRIMSON_STEM_LAYER);
+                        entries.add(ModBlocks.STRIPPED_CRIMSON_HYPHAE_LAYER);
 
                         entries.add(ModBlocks.WARPED_LAYER);
                         entries.add(ModBlocks.WARPED_STEM_LAYER);
                         entries.add(ModBlocks.WARPED_HYPHAE_LAYER);
-                        entries.add(ModBlocks.STR_WARPED_STEM_LAYER);
-                        entries.add(ModBlocks.STR_WARPED_HYPHAE_LAYER);
+                        entries.add(ModBlocks.STRIPPED_WARPED_STEM_LAYER);
+                        entries.add(ModBlocks.STRIPPED_WARPED_HYPHAE_LAYER);
 
                         entries.add(ModBlocks.STONE_LAYER);
                         entries.add(ModBlocks.COBBLESTONE_LAYER);

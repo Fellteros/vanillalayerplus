@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "minecraft:birch_log"
-    }
+    "W": "minecraft:birch_log"
   },
   "pattern": [
     " W",

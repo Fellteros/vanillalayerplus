@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "minecraft:warped_hyphae"
-    }
+    "W": "minecraft:warped_hyphae"
   },
   "pattern": [
     " W",

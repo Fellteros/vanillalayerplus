@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "W": {
-      "item": "minecraft:granite"
-    }
+    "W": "minecraft:granite"
   },
   "pattern": [
     " W",
