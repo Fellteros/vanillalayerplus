@@ -2,11 +2,36 @@ package net.fellter.vanillalayerplus.util;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.data.*;
+import net.minecraft.client.render.item.tint.TintSource;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 
 public class ModBlockStateModelGenerator {
+	public static void registerLayerBlock(Block layerBlock, Block fullBlock, BlockStateModelGenerator bsmg, TextureMap textureMap, TintSource tintSource) {
+		Identifier id = ModModels.LAYER_2.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id2 = ModModels.LAYER_4.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id3 = ModModels.LAYER_6.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id4 = ModModels.LAYER_8.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id5 = ModModels.LAYER_10.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id6 = ModModels.LAYER_12.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id7 = ModModels.LAYER_14.upload(layerBlock, textureMap, bsmg.modelCollector);
+		bsmg.blockStateCollector.accept(createLayerBlockState(layerBlock, id, id2, id3, id4, id5, id6, id7, ModelIds.getBlockModelId(fullBlock)));
+		bsmg.registerTintedItemModel(layerBlock, id, tintSource);
+	}
+
+	public static void registerLayerBlockY15(Block layerBlock, Block fullBlock, BlockStateModelGenerator bsmg, TextureMap textureMap, TintSource tintSource) {
+		Identifier id = ModModels.LAYER_1.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id2 = ModModels.LAYER_3.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id3 = ModModels.LAYER_5.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id4 = ModModels.LAYER_7.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id5 = ModModels.LAYER_9.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id6 = ModModels.LAYER_11.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id7 = ModModels.LAYER_13.upload(layerBlock, textureMap, bsmg.modelCollector);
+		bsmg.blockStateCollector.accept(createLayerBlockState(layerBlock, id, id2, id3, id4, id5, id6, id7, ModelIds.getBlockModelId(fullBlock)));
+		bsmg.registerTintedItemModel(layerBlock, id, tintSource);
+	}
+
 	public static void registerLayerBlock(Block layerBlock, Block fullBlock, BlockStateModelGenerator bsmg, TextureMap textureMap) {
 		Identifier id = ModModels.LAYER_2.upload(layerBlock, textureMap, bsmg.modelCollector);
 		Identifier id2 = ModModels.LAYER_4.upload(layerBlock, textureMap, bsmg.modelCollector);
@@ -15,6 +40,30 @@ public class ModBlockStateModelGenerator {
 		Identifier id5 = ModModels.LAYER_10.upload(layerBlock, textureMap, bsmg.modelCollector);
 		Identifier id6 = ModModels.LAYER_12.upload(layerBlock, textureMap, bsmg.modelCollector);
 		Identifier id7 = ModModels.LAYER_14.upload(layerBlock, textureMap, bsmg.modelCollector);
+		bsmg.blockStateCollector.accept(createLayerBlockState(layerBlock, id, id2, id3, id4, id5, id6, id7, ModelIds.getBlockModelId(fullBlock)));
+		bsmg.registerParentedItemModel(layerBlock, id);
+	}
+
+	public static void registerLayerBlock(Block layerBlock, Identifier fullBlock, BlockStateModelGenerator bsmg, TextureMap textureMap) {
+		Identifier id = ModModels.LAYER_2.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id2 = ModModels.LAYER_4.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id3 = ModModels.LAYER_6.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id4 = ModModels.LAYER_8.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id5 = ModModels.LAYER_10.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id6 = ModModels.LAYER_12.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id7 = ModModels.LAYER_14.upload(layerBlock, textureMap, bsmg.modelCollector);
+		bsmg.blockStateCollector.accept(createLayerBlockState(layerBlock, id, id2, id3, id4, id5, id6, id7, fullBlock));
+		bsmg.registerParentedItemModel(layerBlock, id);
+	}
+
+	public static void registerLayerBlockY15(Block layerBlock, Block fullBlock, BlockStateModelGenerator bsmg, TextureMap textureMap) {
+		Identifier id = ModModels.LAYER_1.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id2 = ModModels.LAYER_3.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id3 = ModModels.LAYER_5.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id4 = ModModels.LAYER_7.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id5 = ModModels.LAYER_9.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id6 = ModModels.LAYER_11.upload(layerBlock, textureMap, bsmg.modelCollector);
+		Identifier id7 = ModModels.LAYER_13.upload(layerBlock, textureMap, bsmg.modelCollector);
 		bsmg.blockStateCollector.accept(createLayerBlockState(layerBlock, id, id2, id3, id4, id5, id6, id7, ModelIds.getBlockModelId(fullBlock)));
 		bsmg.registerParentedItemModel(layerBlock, id);
 	}

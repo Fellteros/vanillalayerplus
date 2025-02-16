@@ -4,15 +4,22 @@ import net.fellter.vanillalayerplus.VanillaLayerPlus;
 import net.fellter.vanillalayerplus.block.LayerBlock;
 import net.fellter.vanillalayerplus.block.ModBlocks;
 import net.fellter.vanillalayerplus.item.ModItems;
+import net.fellter.vanillalayerplus.registry.Args;
+import net.fellter.vanillalayerplus.registry.DatagenArgs;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.data.*;
+import net.minecraft.block.Blocks;
+import net.minecraft.client.data.BlockStateModelGenerator;
+import net.minecraft.client.data.ItemModelGenerator;
+import net.minecraft.client.data.Models;
+import net.minecraft.client.data.TextureMap;
 import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 
 import static net.fellter.vanillalayerplus.util.ModBlockStateModelGenerator.registerLayerBlock;
+import static net.fellter.vanillalayerplus.util.ModBlockStateModelGenerator.registerLayerBlockY15;
 
 public class ModModelProvider extends FabricModelProvider {
 	public ModModelProvider(FabricDataOutput output) {
@@ -118,53 +125,24 @@ public class ModModelProvider extends FabricModelProvider {
 		//        registerLayerBlock(ModBlocks.TUFF_BRICKS_LAYER, Blocks.TUFF_BRICKS, bsmg, TextureMap.all(Blocks.TUFF_BRICKS));
 		//        registerLayerBlock(ModBlocks.CHISELED_TUFF_BRICKS_LAYER, Blocks.CHISELED_TUFF_BRICKS, bsmg, blockAndTopForEnds(Blocks.CHISELED_TUFF_BRICKS), blockAndTopForEnds(Blocks.CHISELED_TUFF_BRICKS));
 
+		registerLayerBlock(ModBlocks.BROWN_MUSHROOM_LAYER, Identifier.of(VanillaLayerPlus.MOD_ID, "block/brown_mushroom_block"), bsmg, TextureMap.all(Blocks.BROWN_MUSHROOM_BLOCK));
+		registerLayerBlock(ModBlocks.RED_MUSHROOM_LAYER, Identifier.of(VanillaLayerPlus.MOD_ID, "block/red_mushroom_block"), bsmg, TextureMap.all(Blocks.RED_MUSHROOM_BLOCK));
+
 		Registries.BLOCK.forEach(block -> {
-			if (ModBlocks.DATAGEN_ARGS.containsKey(block)) {
-				if (Registries.BLOCK.getId(block).getNamespace().equals(VanillaLayerPlus.MOD_ID) && block instanceof LayerBlock) {
-					TextureMap textureMap = ModBlocks.DATAGEN_ARGS.get(block).textureMap;
-					Block fullBlock = ModBlocks.DATAGEN_ARGS.get(block).parentBlock;
-					registerLayerBlock(block, fullBlock, bsmg, textureMap);
+			if (Args.DATAGEN_ARGS.containsKey(block)) {
+				DatagenArgs args = Args.DATAGEN_ARGS.get(block);
+				if (Registries.BLOCK.getId(block).getNamespace().equals(VanillaLayerPlus.MOD_ID) && args.textureMap != null) {
+					if (block instanceof LayerBlock && args.y15 && args.tintSource != null && args.fullTextureBlock != null) registerLayerBlockY15(block, args.fullTextureBlock, bsmg, args.textureMap, args.tintSource);
+					else if (block instanceof LayerBlock && args.y15 && args.tintSource != null && args.parentBlock != null) registerLayerBlockY15(block, args.parentBlock, bsmg, args.textureMap, args.tintSource);
+					else if (block instanceof LayerBlock && args.y15 && args.fullTextureBlock != null) registerLayerBlockY15(block, args.fullTextureBlock, bsmg, args.textureMap);
+					else if (block instanceof LayerBlock && args.y15 && args.parentBlock != null) registerLayerBlockY15(block, args.parentBlock, bsmg, args.textureMap);
+					else if (block instanceof LayerBlock && args.tintSource != null && args.fullTextureBlock != null) registerLayerBlock(block, args.fullTextureBlock, bsmg, args.textureMap, args.tintSource);
+					else if (block instanceof LayerBlock && args.tintSource != null && args.parentBlock != null) registerLayerBlock(block, args.parentBlock, bsmg, args.textureMap, args.tintSource);
+					else if (block instanceof LayerBlock && args.fullTextureBlock != null) registerLayerBlock(block, args.fullTextureBlock, bsmg, args.textureMap);
+					else if (block instanceof LayerBlock && args.parentBlock != null) registerLayerBlock(block, args.parentBlock, bsmg, args.textureMap);
 				}
 			}
 		});
-	}
-
-	public static TextureMap custom(Block sideBlock, Block topBlock, Block bottomBlock, String sideSuffix, String topSuffix, String bottomSuffix) {
-		return new TextureMap()
-				.put(TextureKey.SIDE, TextureMap.getSubId(sideBlock, sideSuffix))
-				.put(TextureKey.TOP, TextureMap.getSubId(topBlock, topSuffix))
-				.put(TextureKey.BOTTOM, TextureMap.getSubId(bottomBlock, bottomSuffix));
-	}
-
-	public static TextureMap blockAndTopForEnds(Block block) {
-		return new TextureMap().put(TextureKey.SIDE, TextureMap.getId(block))
-				.put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
-				.put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_top"));
-	}
-
-	public static TextureMap sideAndTopForEnds(Block block) {
-		return new TextureMap().put(TextureKey.SIDE, TextureMap.getSubId(block, "_side"))
-				.put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
-				.put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_top"));
-	}
-
-	public static TextureMap blockTB(Block block) {
-		return new TextureMap()
-				.put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
-				.put(TextureKey.SIDE, TextureMap.getId(block))
-				.put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_bottom"));
-	}
-
-	public static TextureMap allWithSuffix(Block block, String suffix) {
-		return new TextureMap()
-				.put(TextureKey.ALL, TextureMap.getSubId(block, suffix));
-	}
-
-	public static TextureMap blockSTB(Block block) {
-		return new TextureMap()
-				.put(TextureKey.TOP, TextureMap.getSubId(block, "_top"))
-				.put(TextureKey.SIDE, TextureMap.getSubId(block, "_side"))
-				.put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_bottom"));
 	}
 
 	@Override

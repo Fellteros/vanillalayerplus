@@ -58,6 +58,10 @@
     "vanillalayerplus:stripped_warped_stem_layer",
     "vanillalayerplus:stripped_warped_hyphae_layer",
     "vanillalayerplus:warped_stem_layer",
-    "vanillalayerplus:warped_hyphae_layer"
+    "vanillalayerplus:warped_hyphae_layer",
+    "vanillalayerplus:brown_mushroom_layer",
+    "vanillalayerplus:red_mushroom_layer",
+    "vanillalayerplus:melon_layer",
+    "vanillalayerplus:pumpkin_layer"
   ]
 }

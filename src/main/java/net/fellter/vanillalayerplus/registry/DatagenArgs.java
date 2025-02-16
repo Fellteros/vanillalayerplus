@@ -1,6 +1,7 @@
 package net.fellter.vanillalayerplus.registry;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.data.TextureMap;
@@ -9,40 +10,57 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.registry.tag.TagKey;
 
 public class DatagenArgs {
-	public List<TagKey<Block>> blockTags;
+	public ArrayList<TagKey<Block>> blockTags = new ArrayList<>();
 	public Block parentBlock;
 	public TextureMap textureMap;
-	public ItemConvertible recipeIngredient;
+	public Block fullTextureBlock;
 	public TintSource tintSource;
 	public Boolean y15 = false;
+	public Boolean needsSilkTouch = false;
+	public ArrayList<ItemConvertible> stonecuttingInput = new ArrayList<>();
 
 	public DatagenArgs() {
 	}
 
-	public DatagenArgs create() {
-		return new DatagenArgs();
+	@SafeVarargs
+	public final DatagenArgs blockTags(TagKey<Block>... blockTags) {
+		this.blockTags.addAll(Arrays.asList(blockTags));
+		return this;
+	}
+
+	public DatagenArgs needsSilkTouch() {
+		this.needsSilkTouch = true;
+		return this;
 	}
 
 	@SafeVarargs
-	public final DatagenArgs blockTags(TagKey<Block>... blockTags) {
-		this.blockTags = List.of(blockTags);
+	public final DatagenArgs removeBlockTag(TagKey<Block>... blockTags) {
+		for (TagKey<Block> tagKey : blockTags) {
+			this.blockTags.remove(tagKey);
+		}
+		return this;
+	}
+
+	public DatagenArgs stonecutting(ItemConvertible... stonecuttingInput) {
+		this.stonecuttingInput.add(this.parentBlock);
+		this.stonecuttingInput.addAll(Arrays.asList(stonecuttingInput));
+		return this;
+	}
+
+	public DatagenArgs stonecutting() {
+		this.stonecuttingInput.add(this.parentBlock);
 		return this;
 	}
 
 	public DatagenArgs parentBlock(Block fullBlock) {
 		this.parentBlock = fullBlock;
-		this.recipeIngredient = fullBlock;
+		this.fullTextureBlock = fullBlock;
 		return this;
 	}
 
-	public DatagenArgs parentBlock(Block fullBlock, ItemConvertible recipeIngredient) {
-		this.parentBlock = fullBlock;
-		this.recipeIngredient = recipeIngredient;
-		return this;
-	}
-
-	public DatagenArgs recipeIngredient(ItemConvertible recipeIngredient) {
-		this.recipeIngredient = recipeIngredient;
+	public DatagenArgs parentBlock(Block parentBlock, Block fullTextureBlock) {
+		this.parentBlock = parentBlock;
+		this.fullTextureBlock = fullTextureBlock;
 		return this;
 	}
 

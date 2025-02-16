@@ -3,7 +3,7 @@ package net.fellter.vanillalayerplus.datagen;
 import java.util.concurrent.CompletableFuture;
 
 import net.fellter.vanillalayerplus.VanillaLayerPlus;
-import net.fellter.vanillalayerplus.block.ModBlocks;
+import net.fellter.vanillalayerplus.registry.Args;
 
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
@@ -23,7 +23,7 @@ public class ModLanguageProvider extends FabricLanguageProvider {
 	@Override
 	public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
 		Registries.BLOCK.forEach(block -> {
-			if (ModBlocks.DATAGEN_ARGS.containsKey(block)) {
+			if (Args.DATAGEN_ARGS.containsKey(block)) {
 				Identifier identifier = Registries.BLOCK.getId(block);
 
 				if (identifier.getNamespace().equals(VanillaLayerPlus.MOD_ID)) {

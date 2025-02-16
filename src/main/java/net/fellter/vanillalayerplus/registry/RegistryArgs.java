@@ -8,7 +8,11 @@ import net.minecraft.block.Block;
 public class RegistryArgs {
 	public Boolean transparent = false;
 	public Boolean translucent = false;
+	public Boolean grassTinted = false;
+	public Boolean foliageTinted = false;
+	public Block flattened;
 	public Block stripped;
+	public Block tilled;
 	public Integer burn;
 	public Integer spread;
 	public Block exposed;
@@ -34,8 +38,28 @@ public class RegistryArgs {
 		return this;
 	}
 
+	public RegistryArgs tillable(Block tilled) {
+		this.tilled = tilled;
+		return this;
+	}
+
 	public RegistryArgs stripped(Block stripped) {
 		this.stripped = stripped;
+		return this;
+	}
+
+	public RegistryArgs grassTinted() {
+		this.grassTinted = true;
+		return this;
+	}
+
+	public RegistryArgs foliageTinted() {
+		this.foliageTinted = true;
+		return this;
+	}
+
+	public RegistryArgs flattenable(Block flattened) {
+		this.flattened = flattened;
 		return this;
 	}
 

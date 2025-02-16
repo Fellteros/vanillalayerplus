@@ -30,17 +30,17 @@ import net.minecraft.world.tick.ScheduledTickView;
 
 import com.mojang.serialization.MapCodec;
 
+
 public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
-	public static final MapCodec<LayerBlock> CODEC = createCodec(LayerBlock::new);
 	public static final EnumProperty<Direction> FACING = Properties.FACING;
 	public static final IntProperty LAYERS = Properties.LAYERS;
 	public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
-	protected static final VoxelShape[] FLOOR_LAYERS_TO_SHAPE;
-	protected static final VoxelShape[] NORTH_LAYERS_TO_SHAPE;
-	protected static final VoxelShape[] SOUTH_LAYERS_TO_SHAPE;
-	protected static final VoxelShape[] EAST_LAYERS_TO_SHAPE;
-	protected static final VoxelShape[] WEST_LAYERS_TO_SHAPE;
-	protected static final VoxelShape[] CEILING_LAYERS_TO_SHAPE;
+	protected static VoxelShape[] FLOOR_LAYERS_TO_SHAPE;
+	protected static VoxelShape[] NORTH_LAYERS_TO_SHAPE;
+	protected static VoxelShape[] SOUTH_LAYERS_TO_SHAPE;
+	protected static VoxelShape[] EAST_LAYERS_TO_SHAPE;
+	protected static VoxelShape[] WEST_LAYERS_TO_SHAPE;
+	protected static VoxelShape[] CEILING_LAYERS_TO_SHAPE;
 
 	public LayerBlock(Settings settings) {
 		super(settings);
@@ -49,7 +49,7 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 
 	@Override
 	protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
-		return CODEC;
+		return createCodec(LayerBlock::new);
 	}
 
 	protected boolean canPathfindThrough(BlockState state, NavigationType type) {
@@ -61,17 +61,17 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 	}
 
 	@Override
-	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+	protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
 		return getSidesShape(state, world, pos);
 	}
 
 	@Override
-	public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+	protected VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
 		return getSidesShape(state, world, pos);
 	}
 
 	@Override
-	public VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
+	protected VoxelShape getSidesShape(BlockState state, BlockView world, BlockPos pos) {
 		Direction direction = state.get(FACING);
 		VoxelShape voxel;
 		switch (direction) {
@@ -88,22 +88,23 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 	}
 
 	@Override
-	public VoxelShape getCameraCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+	protected VoxelShape getCameraCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
 		return getOutlineShape(state, world, pos, context);
 	}
 
 	@Override
-	public boolean hasSidedTransparency(BlockState state) {
+	protected boolean hasSidedTransparency(BlockState state) {
 		return true;
 	}
 
 	@Override
-	public float getAmbientOcclusionLightLevel(BlockState state, BlockView world, BlockPos pos) {
-		return state.get(LAYERS) == 8 ? 0.2f : 1.0f;
+	protected float getAmbientOcclusionLightLevel(BlockState state, BlockView world, BlockPos pos) {
+		return state.get(LAYERS) == 8 ? 0.35f : 1.0f;
 	}
 
 	@Override
-	public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+	protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+		if (state.get(LAYERS) == 8) return true;
 		for (Direction direction : DIRECTIONS) {
 			boolean canPlace = world.getBlockState(pos.offset(direction)).isSideSolidFullSquare(world, pos, direction);
 			if (canPlace) return true;
@@ -113,7 +114,7 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 	}
 
 	@Override
-	public BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
+	protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
 		if (!state.canPlaceAt(world, pos)) {
 			return Blocks.AIR.getDefaultState();
 		}
@@ -146,7 +147,7 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 	}
 
 	@Override
-	public boolean canReplace(BlockState state, ItemPlacementContext context) {
+	protected boolean canReplace(BlockState state, ItemPlacementContext context) {
 		int i = state.get(LAYERS);
 
 		if (context.getStack().isOf(this.asItem()) && i < 8) {
