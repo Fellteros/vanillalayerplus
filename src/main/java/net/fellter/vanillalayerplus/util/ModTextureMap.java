@@ -6,7 +6,6 @@ import net.minecraft.client.data.TextureMap;
 import net.minecraft.util.Identifier;
 
 public class ModTextureMap {
-
 	public static TextureMap custom(Block sideBlock, Block topBlock, Block bottomBlock, String sideSuffix, String topSuffix, String bottomSuffix) {
 		return new TextureMap()
 				.put(TextureKey.SIDE, TextureMap.getSubId(sideBlock, sideSuffix))

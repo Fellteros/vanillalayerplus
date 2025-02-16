@@ -37,28 +37,27 @@ public class SpongeLayerBlock extends LayerBlock {
 			world.setBlockState(pos, ModBlocks.WET_SPONGE_LAYER.getStateWithProperties(world.getBlockState(pos)).with(WATERLOGGED, false), 2);
 			world.playSound(null, pos, SoundEvents.BLOCK_SPONGE_ABSORB, SoundCategory.BLOCKS, 1.0F, 1.0F);
 		}
-
 	}
 
 	private boolean absorbWater(World world, BlockPos pos) {
 		BlockState state = world.getBlockState(pos);
 
 		return BlockPos.iterateRecursively(pos, (int) Math.ceil(state.get(LAYERS) * 0.75), 65, (currentPos, queuer) -> {
-
 			for (Direction direction : DIRECTIONS) {
 				queuer.accept(currentPos.offset(direction));
 			}
-
 		}, (currentPos) -> {
 			if (currentPos.equals(pos)) {
 				return BlockPos.IterationState.ACCEPT;
 			} else {
 				BlockState blockState = world.getBlockState(currentPos);
 				FluidState fluidState = world.getFluidState(currentPos);
+
 				if (!fluidState.isIn(FluidTags.WATER)) {
 					return BlockPos.IterationState.SKIP;
 				} else {
 					Block block = blockState.getBlock();
+
 					if (block instanceof FluidDrainable fluidDrainable) {
 						if (!fluidDrainable.tryDrainFluid(null, world, currentPos, blockState).isEmpty()) {
 							return BlockPos.IterationState.ACCEPT;

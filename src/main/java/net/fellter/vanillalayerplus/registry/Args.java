@@ -21,6 +21,7 @@ public final class Args {
 
 	private static void putInDatagenArgs(Block block, DatagenArgs datagenArgs) {
 		DatagenArgs oldArgs = DATAGEN_ARGS.put(block, datagenArgs);
+
 		if (oldArgs == null) {
 			DATAGEN_ARGS.put(block, datagenArgs);
 		} else {
@@ -30,6 +31,7 @@ public final class Args {
 
 	private static void putInRegistryArgs(Block block, RegistryArgs registryArgs) {
 		RegistryArgs oldArgs = REGISTRY_ARGS.put(block, registryArgs);
+
 		if (oldArgs == null) {
 			REGISTRY_ARGS.put(block, registryArgs);
 		} else {
@@ -395,10 +397,8 @@ public final class Args {
 		putInDatagenArgs(ModBlocks.SCULK_LAYER, new DatagenArgs().blockTags(BlockTags.HOE_MINEABLE).parentBlock(Blocks.SCULK).textureMap(TextureMap.all(Blocks.SCULK)));
 		putInDatagenArgs(ModBlocks.BEDROCK_LAYER, new DatagenArgs().blockTags(BlockTags.HOE_MINEABLE).parentBlock(Blocks.BEDROCK).textureMap(TextureMap.all(Blocks.BEDROCK)));
 		putInDatagenArgs(ModBlocks.TARGET_LAYER, new DatagenArgs().blockTags(BlockTags.HOE_MINEABLE).parentBlock(Blocks.TARGET).textureMap(sideAndTopForEnds(Blocks.TARGET)));
-		
-		
 	}
-	
+
 	public static void registerRegistryArgs() {
 		putInRegistryArgs(ModBlocks.OAK_LAYER, new RegistryArgs().flammable(5, 20));
 		putInRegistryArgs(ModBlocks.OAK_LOG_LAYER, new RegistryArgs().stripped(ModBlocks.STRIPPED_OAK_LOG_LAYER).flammable(5, 5));
@@ -504,6 +504,5 @@ public final class Args {
 		putInRegistryArgs(ModBlocks.FLOWERING_AZALEA_LEAVES_LAYER, new RegistryArgs().transparent());
 		putInRegistryArgs(ModBlocks.SLIME_LAYER, new RegistryArgs().translucent());
 		putInRegistryArgs(ModBlocks.HONEY_LAYER, new RegistryArgs().translucent());
-		
 	}
 }

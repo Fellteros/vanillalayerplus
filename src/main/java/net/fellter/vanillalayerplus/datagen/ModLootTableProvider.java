@@ -32,6 +32,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 		Registries.BLOCK.forEach(block -> {
 			if (Args.DATAGEN_ARGS.containsKey(block)) {
 				DatagenArgs datagenArgs = Args.DATAGEN_ARGS.get(block);
+
 				if (Registries.BLOCK.getId(block).getNamespace().equals(VanillaLayerPlus.MOD_ID) && block.getLootTableKey().isPresent()) {
 					if (block instanceof LayerBlock && datagenArgs.needsSilkTouch) {
 						addDrop(block, silkTouchDrops(block));
@@ -42,8 +43,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 			}
 		});
 	}
-
-
 
 	private LootTable.Builder silkTouchDrops(Block drop) {
 		return LootTable.builder().pool(LootPool.builder()

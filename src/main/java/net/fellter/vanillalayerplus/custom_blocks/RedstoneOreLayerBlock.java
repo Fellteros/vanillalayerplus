@@ -50,63 +50,59 @@ public class RedstoneOreLayerBlock extends LayerBlock {
 			light(state, world, pos);
 		}
 
-		return (ActionResult)(stack.getItem() instanceof BlockItem && (new ItemPlacementContext(player, hand, stack, hit)).canPlace() ? ActionResult.PASS : ActionResult.SUCCESS);
+		return stack.getItem() instanceof BlockItem && (new ItemPlacementContext(player, hand, stack, hit)).canPlace() ? ActionResult.PASS : ActionResult.SUCCESS;
 	}
 
 	private static void light(BlockState state, World world, BlockPos pos) {
 		spawnParticles(world, pos);
-		if (!(Boolean)state.get(LIT)) {
-			world.setBlockState(pos, (BlockState)state.with(LIT, true), 3);
-		}
 
+		if (!(Boolean) state.get(LIT)) {
+			world.setBlockState(pos, state.with(LIT, true), 3);
+		}
 	}
 
 	protected boolean hasRandomTicks(BlockState state) {
-		return (Boolean)state.get(LIT);
+		return state.get(LIT);
 	}
 
 	protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-		if ((Boolean)state.get(LIT)) {
-			world.setBlockState(pos, (BlockState)state.with(LIT, false), 3);
+		if (state.get(LIT)) {
+			world.setBlockState(pos, state.with(LIT, false), 3);
 		}
-
 	}
 
 	protected void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
 		super.onStacksDropped(state, world, pos, tool, dropExperience);
+
 		if (dropExperience) {
 			this.dropExperienceWhenMined(world, pos, tool, UniformIntProvider.create(1, 5));
 		}
-
 	}
 
 	public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
 		if (state.get(LIT)) {
 			spawnParticles(world, pos);
 		}
-
 	}
 
 	private static void spawnParticles(World world, BlockPos pos) {
 		Random random = world.random;
 
-		for(Direction direction : Direction.values()) {
+		for (Direction direction : Direction.values()) {
 			BlockPos blockPos = pos.offset(direction);
+
 			if (!world.getBlockState(blockPos).isOpaqueFullCube()) {
 				Direction.Axis axis = direction.getAxis();
-				double e = axis == Direction.Axis.X ? (double)0.5F + (double)0.5625F * (double)direction.getOffsetX() : (double)random.nextFloat();
-				double f = axis == Direction.Axis.Y ? (double)0.5F + (double)0.5625F * (double)direction.getOffsetY() : (double)random.nextFloat();
-				double g = axis == Direction.Axis.Z ? (double)0.5F + (double)0.5625F * (double)direction.getOffsetZ() : (double)random.nextFloat();
-				world.addParticle(DustParticleEffect.DEFAULT, (double)pos.getX() + e, (double)pos.getY() + f, (double)pos.getZ() + g, (double)0.0F, (double)0.0F, (double)0.0F);
+				double e = axis == Direction.Axis.X ? (double) 0.5F + (double) 0.5625F * (double) direction.getOffsetX() : (double) random.nextFloat();
+				double f = axis == Direction.Axis.Y ? (double) 0.5F + (double) 0.5625F * (double) direction.getOffsetY() : (double) random.nextFloat();
+				double g = axis == Direction.Axis.Z ? (double) 0.5F + (double) 0.5625F * (double) direction.getOffsetZ() : (double) random.nextFloat();
+				world.addParticle(DustParticleEffect.DEFAULT, (double) pos.getX() + e, (double) pos.getY() + f, (double) pos.getZ() + g, 0.0F, 0.0F, 0.0F);
 			}
 		}
-
 	}
 
 	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
 		super.appendProperties(builder);
 		builder.add(LIT);
 	}
-
-
 }

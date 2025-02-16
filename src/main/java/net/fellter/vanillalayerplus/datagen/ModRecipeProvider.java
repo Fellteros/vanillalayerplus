@@ -51,9 +51,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 							if (block instanceof LayerBlock) {
 								layerBlockRecipe(block, args.parentBlock).offerTo(exporter);
 							}
+
 							if (block instanceof LayerBlock && args.stonecuttingInput != null) {
 								for (ItemConvertible itemConvertible : args.stonecuttingInput) {
-									offerStonecuttingRecipe(block,itemConvertible);
+									offerStonecuttingRecipe(block, itemConvertible);
 								}
 							}
 						}

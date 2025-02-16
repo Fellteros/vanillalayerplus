@@ -38,6 +38,7 @@ public class DatagenArgs {
 		for (TagKey<Block> tagKey : blockTags) {
 			this.blockTags.remove(tagKey);
 		}
+
 		return this;
 	}
 

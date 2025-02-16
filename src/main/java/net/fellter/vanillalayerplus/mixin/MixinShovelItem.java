@@ -17,26 +17,28 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(ShovelItem.class)
 public abstract class MixinShovelItem {
+	@Shadow
+	@Final
+	protected static Map<Block, BlockState> PATH_STATES;
 
-    @Shadow @Final protected static Map<Block, BlockState> PATH_STATES;
+	@ModifyVariable(method = "useOnBlock", at = @At(value = "STORE"), ordinal = 1)
+	private BlockState path(BlockState value, ItemUsageContext context) {
+		BlockState state = PATH_STATES.get(context.getWorld().getBlockState(context.getBlockPos()).getBlock());
+		BlockState stateFrom = context.getWorld().getBlockState(context.getBlockPos());
 
-    @ModifyVariable(method = "useOnBlock", at = @At(value = "STORE"), ordinal = 1)
-    private BlockState path(BlockState value, ItemUsageContext context) {
-        BlockState state = PATH_STATES.get(context.getWorld().getBlockState(context.getBlockPos()).getBlock());
-        BlockState stateFrom = context.getWorld().getBlockState(context.getBlockPos());
-        if (state != null) {
-            for (Property<?> property : state.getBlock().getStateManager().getProperties()) {
-                state = withProperty(state, property, stateFrom);
-            }
-            return state;
-        }
-        return value;
-    }
+		if (state != null) {
+			for (Property<?> property : state.getBlock().getStateManager().getProperties()) {
+				state = withProperty(state, property, stateFrom);
+			}
 
-    @Unique
-    private static <T extends Comparable<T>> BlockState withProperty(BlockState to, Property<T> property, BlockState from) {
-        return to.with(property, from.get(property));
-    }
+			return state;
+		}
 
+		return value;
+	}
 
+	@Unique
+	private static <T extends Comparable<T>> BlockState withProperty(BlockState to, Property<T> property, BlockState from) {
+		return to.with(property, from.get(property));
+	}
 }

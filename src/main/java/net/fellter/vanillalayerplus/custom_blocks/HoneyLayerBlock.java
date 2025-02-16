@@ -26,14 +26,14 @@ public class HoneyLayerBlock extends LayerBlock {
 
 	public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
 		entity.playSound(SoundEvents.BLOCK_HONEY_BLOCK_SLIDE, 1.0F, 1.0F);
+
 		if (!world.isClient) {
-			world.sendEntityStatus(entity, (byte)54);
+			world.sendEntityStatus(entity, (byte) 54);
 		}
 
 		if (entity.handleFallDamage(fallDistance, 0.2F, world.getDamageSources().fall())) {
 			entity.playSound(this.soundGroup.getFallSound(), this.soundGroup.getVolume() * 0.5F, this.soundGroup.getPitch() * 0.75F);
 		}
-
 	}
 
 	protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
@@ -57,27 +57,27 @@ public class HoneyLayerBlock extends LayerBlock {
 	private boolean isSliding(BlockPos pos, Entity entity) {
 		if (entity.isOnGround()) {
 			return false;
-		} else if (entity.getY() > (double)pos.getY() + 0.9375 - 1.0E-7) {
+		} else if (entity.getY() > (double) pos.getY() + 0.9375 - 1.0E-7) {
 			return false;
 		} else if (method_65067(entity.getVelocity().y) >= -0.08) {
 			return false;
 		} else {
-			double d = Math.abs((double)pos.getX() + 0.5 - entity.getX());
-			double e = Math.abs((double)pos.getZ() + 0.5 - entity.getZ());
-			double f = 0.4375 + (double)(entity.getWidth() / 2.0F);
+			double d = Math.abs((double) pos.getX() + 0.5 - entity.getX());
+			double e = Math.abs((double) pos.getZ() + 0.5 - entity.getZ());
+			double f = 0.4375 + (double) (entity.getWidth() / 2.0F);
 			return d + 1.0E-7 > f || e + 1.0E-7 > f;
 		}
 	}
 
 	private void triggerAdvancement(Entity entity, BlockPos pos) {
 		if (entity instanceof ServerPlayerEntity && entity.getWorld().getTime() % 20L == 0L) {
-			Criteria.SLIDE_DOWN_BLOCK.trigger((ServerPlayerEntity)entity, entity.getWorld().getBlockState(pos));
+			Criteria.SLIDE_DOWN_BLOCK.trigger((ServerPlayerEntity) entity, entity.getWorld().getBlockState(pos));
 		}
-
 	}
 
 	private void updateSlidingVelocity(Entity entity) {
 		Vec3d vec3d = entity.getVelocity();
+
 		if (method_65067(entity.getVelocity().y) < -0.13) {
 			double d = -0.05 / method_65067(entity.getVelocity().y);
 			entity.setVelocity(new Vec3d(vec3d.x * d, method_65068(), vec3d.z * d));
@@ -95,7 +95,7 @@ public class HoneyLayerBlock extends LayerBlock {
 			}
 
 			if (!world.isClient && world.random.nextInt(5) == 0) {
-				world.sendEntityStatus(entity, (byte)53);
+				world.sendEntityStatus(entity, (byte) 53);
 			}
 		}
 	}

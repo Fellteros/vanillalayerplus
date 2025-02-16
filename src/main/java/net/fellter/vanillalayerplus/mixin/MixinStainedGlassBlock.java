@@ -20,7 +20,9 @@ import org.spongepowered.asm.mixin.Unique;
 public class MixinStainedGlassBlock extends Block {
 	@Unique
 	private static final Map<BlockState, VoxelShape> CACHED = new ConcurrentHashMap<>();
-	@Shadow @Final private DyeColor color;
+	@Shadow
+	@Final
+	private DyeColor color;
 
 	public MixinStainedGlassBlock(Settings settings) {
 		super(settings);
@@ -36,8 +38,10 @@ public class MixinStainedGlassBlock extends Block {
 		if (stateFrom.getBlock() instanceof Stainable stainable && !stateFrom.getBlock().equals(Blocks.BEACON)) {
 			VoxelShape stateCullingShape = getCached(state);
 			VoxelShape stateFromCullingShape = getCached(stateFrom);
+
 			return VoxelShapes.isSideCovered(stateCullingShape, stateFromCullingShape, direction) && stainable.getColor() == color;
 		}
+
 		return false;
 	}
 }

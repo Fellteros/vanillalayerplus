@@ -30,7 +30,6 @@ import net.minecraft.world.tick.ScheduledTickView;
 
 import com.mojang.serialization.MapCodec;
 
-
 public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 	public static final EnumProperty<Direction> FACING = Properties.FACING;
 	public static final IntProperty LAYERS = Properties.LAYERS;
@@ -104,7 +103,10 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 
 	@Override
 	protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-		if (state.get(LAYERS) == 8) return true;
+		if (state.get(LAYERS) == 8) {
+			return true;
+		}
+
 		for (Direction direction : DIRECTIONS) {
 			boolean canPlace = world.getBlockState(pos.offset(direction)).isSideSolidFullSquare(world, pos, direction);
 			if (canPlace) return true;

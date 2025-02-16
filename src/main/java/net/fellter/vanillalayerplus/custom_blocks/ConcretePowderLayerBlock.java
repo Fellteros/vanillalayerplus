@@ -21,7 +21,6 @@ public class ConcretePowderLayerBlock extends FallingLayerBlock {
 		this.hardened = hardened.getDefaultState();
 	}
 
-
 	@Override
 	public void onLanding(World world, BlockPos pos, BlockState fallingBlockState, BlockState currentStateInPos, FallingBlockEntity fallingBlockEntity) {
 		if (shouldHarden(world, pos, currentStateInPos) && pos != null) {
@@ -32,12 +31,12 @@ public class ConcretePowderLayerBlock extends FallingLayerBlock {
 		}
 	}
 
-
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
 		BlockPos blockPos = ctx.getBlockPos();
 		World blockView = ctx.getWorld();
 		BlockState placementState = super.getPlacementState(ctx);
+
 		if (shouldHarden(blockView, blockPos, blockView.getBlockState(blockPos))) {
 			if (placementState != null) {
 				return this.hardened
@@ -46,6 +45,7 @@ public class ConcretePowderLayerBlock extends FallingLayerBlock {
 						.with(LAYERS, placementState.get(LAYERS));
 			}
 		}
+
 		return super.getPlacementState(ctx);
 	}
 
@@ -56,6 +56,7 @@ public class ConcretePowderLayerBlock extends FallingLayerBlock {
 	private static boolean hardensOnAnySide(BlockView world, BlockPos pos) {
 		boolean bl = false;
 		BlockPos.Mutable mutable = pos.mutableCopy();
+
 		for (Direction direction : Direction.values()) {
 			BlockState blockState = world.getBlockState(mutable);
 			if (direction == Direction.DOWN && !hardensIn(blockState)) continue;
@@ -65,6 +66,7 @@ public class ConcretePowderLayerBlock extends FallingLayerBlock {
 			bl = true;
 			break;
 		}
+
 		return bl;
 	}
 
@@ -80,9 +82,8 @@ public class ConcretePowderLayerBlock extends FallingLayerBlock {
 					.with(FACING, world.getBlockState(pos).get(FACING))
 					.with(LAYERS, world.getBlockState(pos).get(LAYERS));
 		}
+
 		tickView.scheduleBlockTick(pos, this, this.getFallDelay());
 		return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
 	}
-
-
 }

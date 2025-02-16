@@ -218,7 +218,7 @@ public class ModItemGroups {
 						entries.add(ModBlocks.WAXED_OXIDIZED_CHISELED_COPPER_LAYER);
 						entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_GRATE_LAYER);
 						entries.add(ModBlocks.WAXED_OXIDIZED_CUT_COPPER_LAYER);
-						
+
 						entries.add(ModBlocks.WHITE_WOOL_LAYER);
 						entries.add(ModBlocks.LIGHT_GRAY_WOOL_LAYER);
 						entries.add(ModBlocks.GRAY_WOOL_LAYER);
@@ -235,7 +235,7 @@ public class ModItemGroups {
 						entries.add(ModBlocks.PURPLE_WOOL_LAYER);
 						entries.add(ModBlocks.MAGENTA_WOOL_LAYER);
 						entries.add(ModBlocks.PINK_WOOL_LAYER);
-						
+
 						entries.add(ModBlocks.WHITE_TERRACOTTA_LAYER);
 						entries.add(ModBlocks.LIGHT_GRAY_TERRACOTTA_LAYER);
 						entries.add(ModBlocks.GRAY_TERRACOTTA_LAYER);
@@ -252,7 +252,7 @@ public class ModItemGroups {
 						entries.add(ModBlocks.PURPLE_TERRACOTTA_LAYER);
 						entries.add(ModBlocks.MAGENTA_TERRACOTTA_LAYER);
 						entries.add(ModBlocks.PINK_TERRACOTTA_LAYER);
-						
+
 						entries.add(ModBlocks.WHITE_CONCRETE_LAYER);
 						entries.add(ModBlocks.LIGHT_GRAY_CONCRETE_LAYER);
 						entries.add(ModBlocks.GRAY_CONCRETE_LAYER);
@@ -269,7 +269,7 @@ public class ModItemGroups {
 						entries.add(ModBlocks.PURPLE_CONCRETE_LAYER);
 						entries.add(ModBlocks.MAGENTA_CONCRETE_LAYER);
 						entries.add(ModBlocks.PINK_CONCRETE_LAYER);
-						
+
 						entries.add(ModBlocks.WHITE_CONCRETE_POWDER_LAYER);
 						entries.add(ModBlocks.LIGHT_GRAY_CONCRETE_POWDER_LAYER);
 						entries.add(ModBlocks.GRAY_CONCRETE_POWDER_LAYER);
@@ -286,7 +286,7 @@ public class ModItemGroups {
 						entries.add(ModBlocks.PURPLE_CONCRETE_POWDER_LAYER);
 						entries.add(ModBlocks.MAGENTA_CONCRETE_POWDER_LAYER);
 						entries.add(ModBlocks.PINK_CONCRETE_POWDER_LAYER);
-						
+
 						entries.add(ModBlocks.WHITE_GLAZED_TERRACOTTA_LAYER);
 						entries.add(ModBlocks.LIGHT_GRAY_GLAZED_TERRACOTTA_LAYER);
 						entries.add(ModBlocks.GRAY_GLAZED_TERRACOTTA_LAYER);
@@ -303,7 +303,7 @@ public class ModItemGroups {
 						entries.add(ModBlocks.PURPLE_GLAZED_TERRACOTTA_LAYER);
 						entries.add(ModBlocks.MAGENTA_GLAZED_TERRACOTTA_LAYER);
 						entries.add(ModBlocks.PINK_GLAZED_TERRACOTTA_LAYER);
-						
+
 						entries.add(ModBlocks.GLASS_LAYER);
 						entries.add(ModBlocks.WHITE_STAINED_GLASS_LAYER);
 						entries.add(ModBlocks.LIGHT_GRAY_STAINED_GLASS_LAYER);
@@ -330,12 +330,12 @@ public class ModItemGroups {
 						entries.add(ModBlocks.COARSE_DIRT_LAYER);
 						entries.add(ModBlocks.ROOTED_DIRT_LAYER);
 						entries.add(ModBlocks.FARMLAND_LAYER);
-						
+
 						entries.add(ModBlocks.MUD_LAYER);
 						entries.add(ModBlocks.CLAY_LAYER);
 						entries.add(ModBlocks.GRAVEL_LAYER);
 						entries.add(ModBlocks.SAND_LAYER);
-						
+
 						entries.add(ModBlocks.ICE_LAYER);
 						entries.add(ModBlocks.PACKED_ICE_LAYER);
 						entries.add(ModBlocks.BLUE_ICE_LAYER);
@@ -354,7 +354,7 @@ public class ModItemGroups {
 						entries.add(ModBlocks.SOUL_SAND_LAYER);
 						entries.add(ModBlocks.SOUL_SOIL_LAYER);
 						entries.add(ModBlocks.BONE_LAYER);
-						
+
 						entries.add(ModBlocks.COAL_ORE_LAYER);
 						entries.add(ModBlocks.DEEPSLATE_COAL_ORE_LAYER);
 						entries.add(ModBlocks.IRON_ORE_LAYER);
@@ -419,16 +419,15 @@ public class ModItemGroups {
 						entries.add(ModBlocks.SLIME_LAYER);
 						entries.add(ModBlocks.HONEY_LAYER);
 						entries.add(ModBlocks.RESIN_LAYER);
-						
+
 						entries.add(ModBlocks.OCHRE_FROGLIGHT_LAYER);
 						entries.add(ModBlocks.VERDANT_FROGLIGHT_LAYER);
 						entries.add(ModBlocks.PEARLESCENT_FROGLIGHT_LAYER);
 						entries.add(ModBlocks.SCULK_LAYER);
 						entries.add(ModBlocks.BEDROCK_LAYER);
 						entries.add(ModBlocks.TARGET_LAYER);
-
-
 					}).build());
+
 	public static void registerItemGroups() {
 	}
 }

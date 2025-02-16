@@ -29,7 +29,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
 public class ModBlocks {
-
 	private static final Block LOG_DEF = registerBlock("log_def", Block::new, AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable());
 	private static final Block BAMBOO_DEF = registerBlock("bamboo_def", Block::new, AbstractBlock.Settings.copy(LOG_DEF).sounds(BlockSoundGroup.BAMBOO_WOOD));
 	private static final Block NETHER_DEF = registerBlock("nether_def", Block::new, AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASS).strength(2.0F).sounds(BlockSoundGroup.NETHER_STEM));
@@ -343,32 +342,35 @@ public class ModBlocks {
 	public static final Block FARMLAND_LAYER = registerBlock("farmland_layer", FlattenableLayerBlock::new, AbstractBlock.Settings.copy(Blocks.FARMLAND));
 	public static final Block DIRT_LAYER = registerBlock("dirt_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.DIRT));
 	public static final Block GRASS_LAYER = registerBlock("grass_layer", settings -> new LayerBlock(settings) {
-				private static boolean canSurvive(BlockState state, WorldView world, BlockPos pos) {
-					BlockPos blockPos = pos.up();
-					BlockState blockState = world.getBlockState(blockPos);
-					if (blockState.getFluidState().getLevel() == 8) {
-						return false;
-					} else if (state.get(LAYERS) == 8) {
-						return !VoxelShapes.isSideCovered(state.getOutlineShape(EmptyBlockView.INSTANCE, BlockPos.ORIGIN), blockState.getOutlineShape(EmptyBlockView.INSTANCE, BlockPos.ORIGIN), Direction.UP);
-					}
-					return true;
-				}
+		private static boolean canSurvive(BlockState state, WorldView world, BlockPos pos) {
+			BlockPos blockPos = pos.up();
+			BlockState blockState = world.getBlockState(blockPos);
 
-				protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-					if (!canSurvive(state, world, pos)) {
-						world.setBlockState(pos, ModBlocks.DIRT_LAYER.getStateWithProperties(state));
-					}
-				}}, AbstractBlock.Settings.create().strength(0.6f).sounds(BlockSoundGroup.GRASS).mapColor(MapColor.PALE_GREEN).ticksRandomly());
+			if (blockState.getFluidState().getLevel() == 8) {
+				return false;
+			} else if (state.get(LAYERS) == 8) {
+				return !VoxelShapes.isSideCovered(state.getOutlineShape(EmptyBlockView.INSTANCE, BlockPos.ORIGIN), blockState.getOutlineShape(EmptyBlockView.INSTANCE, BlockPos.ORIGIN), Direction.UP);
+			}
+
+			return true;
+		}
+
+		protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+			if (!canSurvive(state, world, pos)) {
+				world.setBlockState(pos, ModBlocks.DIRT_LAYER.getStateWithProperties(state));
+			}
+		}
+	}, AbstractBlock.Settings.create().strength(0.6f).sounds(BlockSoundGroup.GRASS).mapColor(MapColor.PALE_GREEN).ticksRandomly());
 	public static final Block PODZOL_LAYER = registerBlock("podzol_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.PODZOL));
 	public static final Block MYCELIUM_LAYER = registerBlock("mycelium_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.MYCELIUM));
 	public static final Block COARSE_DIRT_LAYER = registerBlock("coarse_dirt_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.COARSE_DIRT));
 	public static final Block ROOTED_DIRT_LAYER = registerBlock("rooted_dirt_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.ROOTED_DIRT));
-	
+
 	public static final Block MUD_LAYER = registerBlock("mud_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.MUD));
 	public static final Block CLAY_LAYER = registerBlock("clay_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.CLAY));
 	public static final Block GRAVEL_LAYER = registerBlock("gravel_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.GRAVEL));
 	public static final Block SAND_LAYER = registerBlock("sand_layer", FallingLayerBlock::new, AbstractBlock.Settings.copy(Blocks.SAND));
-	
+
 	public static final Block ICE_LAYER = registerBlock("ice_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.ICE));
 	public static final Block PACKED_ICE_LAYER = registerBlock("packed_ice_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.PACKED_ICE));
 	public static final Block BLUE_ICE_LAYER = registerBlock("blue_ice_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.BLUE_ICE));
@@ -376,19 +378,19 @@ public class ModBlocks {
 
 	public static final Block MOSS_LAYER = registerBlock("moss_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.MOSS_BLOCK));
 	public static final Block PALE_MOSS_LAYER = registerBlock("pale_moss_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.PALE_MOSS_BLOCK));
-	
+
 	public static final Block CALCITE_LAYER = registerBlock("calcite_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.CALCITE));
 	public static final Block DRIPSTONE_LAYER = registerBlock("dripstone_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK));
 	public static final Block MAGMA_LAYER = registerBlock("magma_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.MAGMA_BLOCK));
 	public static final Block OBSIDIAN_LAYER = registerBlock("obsidian_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.OBSIDIAN));
 	public static final Block CRYING_OBSIDIAN_LAYER = registerBlock("crying_obsidian_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.CRYING_OBSIDIAN));
-	
+
 	public static final Block CRIMSON_NYLIUM_LAYER = registerBlock("crimson_nylium_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.CRIMSON_NYLIUM));
 	public static final Block WARPED_NYLIUM_LAYER = registerBlock("warped_nylium_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.WARPED_NYLIUM));
 	public static final Block SOUL_SAND_LAYER = registerBlock("soul_sand_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.SOUL_SAND));
 	public static final Block SOUL_SOIL_LAYER = registerBlock("soul_soil_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.SOUL_SOIL));
 	public static final Block BONE_LAYER = registerBlock("bone_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.BONE_BLOCK));
-	
+
 	public static final Block COAL_ORE_LAYER = registerBlock("coal_ore_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.COAL_ORE));
 	public static final Block DEEPSLATE_COAL_ORE_LAYER = registerBlock("deepslate_coal_ore_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.DEEPSLATE_COAL_ORE));
 	public static final Block IRON_ORE_LAYER = registerBlock("iron_ore_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.IRON_ORE));
@@ -457,17 +459,14 @@ public class ModBlocks {
 	public static final Block SLIME_LAYER = registerBlock("slime_layer", SlimeLayerBlock::new, AbstractBlock.Settings.copy(Blocks.SLIME_BLOCK));
 	public static final Block HONEY_LAYER = registerBlock("honey_layer", HoneyLayerBlock::new, AbstractBlock.Settings.copy(Blocks.HONEY_BLOCK));
 	public static final Block RESIN_LAYER = registerBlock("resin_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.RESIN_BLOCK));
-	
+
 	public static final Block OCHRE_FROGLIGHT_LAYER = registerBlock("ochre_froglight_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.OCHRE_FROGLIGHT));
 	public static final Block VERDANT_FROGLIGHT_LAYER = registerBlock("verdant_froglight_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.VERDANT_FROGLIGHT));
 	public static final Block PEARLESCENT_FROGLIGHT_LAYER = registerBlock("pearlescent_froglight_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.PEARLESCENT_FROGLIGHT));
-	
+
 	public static final Block SCULK_LAYER = registerBlock("sculk_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.SCULK));
 	public static final Block BEDROCK_LAYER = registerBlock("bedrock_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.BEDROCK));
 	public static final Block TARGET_LAYER = registerBlock("target_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.TARGET));
-
-
-
 
 	private static Block registerBlock(String name, @NotNull Function<AbstractBlock.Settings, Block> function, AbstractBlock.@NotNull Settings settings) {
 		Block block = function.apply(settings.registryKey(keyOfBlock(name)));

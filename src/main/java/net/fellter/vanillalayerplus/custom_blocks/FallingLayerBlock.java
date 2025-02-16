@@ -52,6 +52,7 @@ public class FallingLayerBlock extends LayerBlock implements LandingBlock {
 	public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
 		if (random.nextInt(16) == 0) {
 			BlockPos blockPos = pos.down();
+
 			if (canFallThrough(world.getBlockState(blockPos))) {
 				ParticleUtil.spawnParticle(world, pos, random, new BlockStateParticleEffect(ParticleTypes.FALLING_DUST, state));
 			}

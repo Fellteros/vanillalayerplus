@@ -39,6 +39,7 @@ public class FlattenableLayerBlock extends LayerBlock {
 		if (direction == Direction.UP) {
 			tickView.scheduleBlockTick(pos, this, 1);
 		}
+
 		return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
 	}
 
@@ -143,6 +144,5 @@ public class FlattenableLayerBlock extends LayerBlock {
 				Block.createCuboidShape(0.0, 5.0, 0.0, 16.0, 16.0, 16.0),
 				Block.createCuboidShape(0.0, 3.0, 0.0, 16.0, 16.0, 16.0),
 				Block.createCuboidShape(0.0, 1.0, 0.0, 16.0, 16.0, 16.0)};
-
 	}
 }
