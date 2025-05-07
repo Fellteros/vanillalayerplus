@@ -10,6 +10,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
@@ -30,6 +31,7 @@ public class FlattenableLayerBlock extends LayerBlock {
 	protected static VoxelShape[] EAST_LAYERS_TO_SHAPE_15;
 	protected static VoxelShape[] WEST_LAYERS_TO_SHAPE_15;
 	protected static VoxelShape[] CEILING_LAYERS_TO_SHAPE_15;
+
 	public FlattenableLayerBlock(Settings settings) {
 		super(settings);
 	}
@@ -53,6 +55,11 @@ public class FlattenableLayerBlock extends LayerBlock {
 		BlockState state = ModRegistries.FLATTENED_TO_BLOCK_MAP.get(blockState.getBlock()).getBlock().getStateWithProperties(blockState);
 		world.setBlockState(pos, state);
 		world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(entity, state));
+	}
+
+	@Override
+	public @Nullable BlockState getPlacementState(ItemPlacementContext ctx) {
+		return super.getPlacementState(ctx);
 	}
 
 	@Override

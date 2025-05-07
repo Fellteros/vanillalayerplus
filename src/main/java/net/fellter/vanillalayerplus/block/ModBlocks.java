@@ -371,7 +371,7 @@ public class ModBlocks {
 	public static final Block GRAVEL_LAYER = registerBlock("gravel_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.GRAVEL));
 	public static final Block SAND_LAYER = registerBlock("sand_layer", FallingLayerBlock::new, AbstractBlock.Settings.copy(Blocks.SAND));
 
-	public static final Block ICE_LAYER = registerBlock("ice_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.ICE));
+	public static final Block ICE_LAYER = registerBlock("ice_layer", IceLayerBlock::new, AbstractBlock.Settings.copy(Blocks.ICE));
 	public static final Block PACKED_ICE_LAYER = registerBlock("packed_ice_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.PACKED_ICE));
 	public static final Block BLUE_ICE_LAYER = registerBlock("blue_ice_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.BLUE_ICE));
 	public static final Block SNOW_LAYER = registerBlock("snow_layer", LayerBlock::new, AbstractBlock.Settings.copy(Blocks.SNOW_BLOCK));

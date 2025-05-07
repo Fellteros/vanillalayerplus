@@ -96,7 +96,7 @@ public class RedstoneOreLayerBlock extends LayerBlock {
 				double e = axis == Direction.Axis.X ? (double) 0.5F + (double) 0.5625F * (double) direction.getOffsetX() : (double) random.nextFloat();
 				double f = axis == Direction.Axis.Y ? (double) 0.5F + (double) 0.5625F * (double) direction.getOffsetY() : (double) random.nextFloat();
 				double g = axis == Direction.Axis.Z ? (double) 0.5F + (double) 0.5625F * (double) direction.getOffsetZ() : (double) random.nextFloat();
-				world.addParticle(DustParticleEffect.DEFAULT, (double) pos.getX() + e, (double) pos.getY() + f, (double) pos.getZ() + g, 0.0F, 0.0F, 0.0F);
+				world.addParticleClient(DustParticleEffect.DEFAULT, (double) pos.getX() + e, (double) pos.getY() + f, (double) pos.getZ() + g, 0.0F, 0.0F, 0.0F);
 			}
 		}
 	}

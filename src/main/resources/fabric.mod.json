@@ -3,13 +3,14 @@
 	"id": "vanillalayerplus",
 	"version": "${version}",
 	"name": "Vanilla+ Layers",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Mod adding layers (stackable two pixel tall blocks) to Minecraft.",
 	"authors": [
 		"Fellter"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/vanilla+-layers",
+		"sources": "https://github.com/Fellteros/vanillalayerplus",
+		"issues": "https://github.com/Fellteros/vanillalayerplus/issues"
 	},
 	"license": "CC-BY-NC-4.0",
 	"icon": "assets/vanillalayerplus/icon.png",
@@ -29,8 +30,8 @@
 		"vanillalayerplus.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.4",
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.5",
 		"java": ">=21",
 		"fabric-api": "*"
 	},

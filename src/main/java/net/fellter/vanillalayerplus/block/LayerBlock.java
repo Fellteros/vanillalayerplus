@@ -5,6 +5,8 @@ import java.util.Objects;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluid;
@@ -13,6 +15,7 @@ import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
@@ -24,13 +27,12 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.tick.ScheduledTickView;
 
-import com.mojang.serialization.MapCodec;
-
-public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
+public class LayerBlock extends Block implements Waterloggable {
 	public static final EnumProperty<Direction> FACING = Properties.FACING;
 	public static final IntProperty LAYERS = Properties.LAYERS;
 	public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
@@ -44,11 +46,6 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 	public LayerBlock(Settings settings) {
 		super(settings);
 		this.setDefaultState(this.getStateManager().getDefaultState().with(LAYERS, 1).with(WATERLOGGED, false).with(FACING, Direction.DOWN));
-	}
-
-	@Override
-	protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
-		return createCodec(LayerBlock::new);
 	}
 
 	protected boolean canPathfindThrough(BlockState state, NavigationType type) {
@@ -103,16 +100,24 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 
 	@Override
 	protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-		if (state.get(LAYERS) == 8) {
-			return true;
-		}
-
 		for (Direction direction : DIRECTIONS) {
 			boolean canPlace = world.getBlockState(pos.offset(direction)).isSideSolidFullSquare(world, pos, direction);
 			if (canPlace) return true;
 		}
 
 		return false;
+	}
+
+	@Override
+	public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
+		if (player.isSneaking() && state.get(LAYERS) != 1) {
+			world.setBlockState(pos, state.with(LAYERS, state.get(LAYERS) - 1));
+			player.incrementStat(Stats.MINED.getOrCreateStat(this));
+			player.addExhaustion(0.005F);
+			dropStack(world, pos, new ItemStack(this));
+		} else {
+			super.afterBreak(world, player, pos, state, blockEntity, tool);
+		}
 	}
 
 	@Override
@@ -129,12 +134,12 @@ public class LayerBlock extends HorizontalFacingBlock implements Waterloggable {
 	}
 
 	@Override
-	public boolean canFillWithFluid(@Nullable PlayerEntity player, BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
+	public boolean canFillWithFluid(@Nullable LivingEntity filler, BlockView world, BlockPos pos, BlockState state, Fluid fluid) {
 		return state.get(Properties.LAYERS) < 8;
 	}
 
 	@Override
-	public ItemStack tryDrainFluid(@Nullable PlayerEntity player, WorldAccess world, BlockPos pos, BlockState state) {
+	public ItemStack tryDrainFluid(@Nullable LivingEntity drainer, WorldAccess world, BlockPos pos, BlockState state) {
 		if (state.get(WATERLOGGED)) {
 			world.setBlockState(pos, state.with(WATERLOGGED, false), 3);
 

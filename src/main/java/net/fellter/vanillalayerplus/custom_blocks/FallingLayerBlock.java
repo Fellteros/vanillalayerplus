@@ -3,7 +3,7 @@ package net.fellter.vanillalayerplus.custom_blocks;
 import net.fellter.vanillalayerplus.block.LayerBlock;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.block.LandingBlock;
+import net.minecraft.block.Falling;
 import net.minecraft.entity.FallingBlockEntity;
 import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.ParticleTypes;
@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.tick.ScheduledTickView;
 
-public class FallingLayerBlock extends LayerBlock implements LandingBlock {
+public class FallingLayerBlock extends LayerBlock implements Falling {
 	public FallingLayerBlock(Settings settings) {
 		super(settings);
 	}

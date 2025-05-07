@@ -5,6 +5,7 @@ import net.fellter.vanillalayerplus.block.LayerBlock;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityCollisionHandler;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.vehicle.AbstractBoatEntity;
@@ -24,7 +25,7 @@ public class HoneyLayerBlock extends LayerBlock {
 		return entity instanceof LivingEntity || entity instanceof AbstractMinecartEntity || entity instanceof TntEntity || entity instanceof AbstractBoatEntity;
 	}
 
-	public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+	public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, double fallDistance) {
 		entity.playSound(SoundEvents.BLOCK_HONEY_BLOCK_SLIDE, 1.0F, 1.0F);
 
 		if (!world.isClient) {
@@ -36,14 +37,14 @@ public class HoneyLayerBlock extends LayerBlock {
 		}
 	}
 
-	protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+	protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler) {
 		if (this.isSliding(pos, entity)) {
 			this.triggerAdvancement(entity, pos);
 			this.updateSlidingVelocity(entity);
 			this.addCollisionEffects(world, entity);
 		}
 
-		super.onEntityCollision(state, world, pos, entity);
+		super.onEntityCollision(state, world, pos, entity, handler);
 	}
 
 	private static double method_65067(double d) {
