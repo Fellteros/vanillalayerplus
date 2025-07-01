@@ -7,6 +7,9 @@ import net.fellter.vanillalayerplus.block.ModBlocks;
 import net.fellter.vanillalayerplus.item.ModItemGroups;
 import net.fellter.vanillalayerplus.item.ModItems;
 
+import net.minecraft.block.Block;
+import net.minecraft.registry.Registries;
+
 import net.fabricmc.api.ModInitializer;
 
 public class VanillaLayerPlus implements ModInitializer {
@@ -18,5 +21,9 @@ public class VanillaLayerPlus implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
+	}
+
+	public static boolean isNamespaced(Block block) {
+		return Registries.BLOCK.getId(block).getNamespace().equals(MOD_ID);
 	}
 }

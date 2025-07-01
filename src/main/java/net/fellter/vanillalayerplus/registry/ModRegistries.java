@@ -12,14 +12,14 @@ import net.fellter.vanillalayerplus.block.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.color.world.BiomeColors;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.item.HoeItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.FoliageColors;
 import net.minecraft.world.biome.GrassColors;
 
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
@@ -111,7 +111,7 @@ public class ModRegistries {
 				RegistryArgs registryArgs = Args.REGISTRY_ARGS.get(block);
 
 				if (Registries.BLOCK.getId(block).getNamespace().equals(VanillaLayerPlus.MOD_ID) && registryArgs.transparent) {
-					BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
+					BlockRenderLayerMap.putBlock(block, BlockRenderLayer.CUTOUT);
 				}
 			}
 		});
@@ -123,7 +123,7 @@ public class ModRegistries {
 				RegistryArgs registryArgs = Args.REGISTRY_ARGS.get(block);
 
 				if (Registries.BLOCK.getId(block).getNamespace().equals(VanillaLayerPlus.MOD_ID) && registryArgs.translucent) {
-					BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getTranslucent());
+					BlockRenderLayerMap.putBlock(block, BlockRenderLayer.TRANSLUCENT);
 				}
 			}
 		});

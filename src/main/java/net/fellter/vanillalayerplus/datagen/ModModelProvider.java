@@ -1,5 +1,7 @@
 package net.fellter.vanillalayerplus.datagen;
 
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethodStage;
+
 import net.fellter.vanillalayerplus.VanillaLayerPlus;
 import net.fellter.vanillalayerplus.block.LayerBlock;
 import net.fellter.vanillalayerplus.block.ModBlocks;
@@ -31,11 +33,11 @@ public class ModModelProvider extends FabricModelProvider {
 		registerLayerBlock(ModBlocks.BROWN_MUSHROOM_LAYER, Identifier.of(VanillaLayerPlus.MOD_ID, "block/brown_mushroom_block"), bsmg, TextureMap.all(Blocks.BROWN_MUSHROOM_BLOCK));
 		registerLayerBlock(ModBlocks.RED_MUSHROOM_LAYER, Identifier.of(VanillaLayerPlus.MOD_ID, "block/red_mushroom_block"), bsmg, TextureMap.all(Blocks.RED_MUSHROOM_BLOCK));
 
-		Registries.BLOCK.forEach(block -> {
+		Registries.BLOCK.stream().filter(VanillaLayerPlus::isNamespaced).forEach(block -> {
 			if (Args.DATAGEN_ARGS.containsKey(block)) {
 				DatagenArgs args = Args.DATAGEN_ARGS.get(block);
 
-				if (Registries.BLOCK.getId(block).getNamespace().equals(VanillaLayerPlus.MOD_ID) && args.textureMap != null) {
+				if (args.textureMap != null) {
 					if (block instanceof LayerBlock && args.y15 && args.tintSource != null && args.fullTextureBlock != null) {
 						registerLayerBlockY15(block, args.fullTextureBlock, bsmg, args.textureMap, args.tintSource);
 					} else if (block instanceof LayerBlock && args.y15 && args.tintSource != null && args.parentBlock != null) {

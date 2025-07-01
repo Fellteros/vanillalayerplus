@@ -12,6 +12,7 @@ import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.Identifier;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -23,13 +24,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 	@Override
 	protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-		Registries.BLOCK.forEach(block -> {
-			if (Registries.BLOCK.getId(block).getNamespace().equals(VanillaLayerPlus.MOD_ID) && block instanceof LayerBlock && Args.DATAGEN_ARGS.containsKey(block)) {
-				getOrCreateTagBuilder(ModTags.LAYERS).add(block);
+		Registries.BLOCK.stream().filter(VanillaLayerPlus::isNamespaced).forEach(block -> {
+			Identifier identifier = Registries.BLOCK.getId(block);
+			if (block instanceof LayerBlock && Args.DATAGEN_ARGS.containsKey(block)) {
+				getTagBuilder(ModTags.LAYERS).add(identifier);
 				List<TagKey<Block>> key = Args.DATAGEN_ARGS.get(block).blockTags;
 
 				for (TagKey<Block> blockTagKey : key) {
-					getOrCreateTagBuilder(blockTagKey).add(block);
+					getTagBuilder(blockTagKey).add(identifier);
 				}
 			}
 		});

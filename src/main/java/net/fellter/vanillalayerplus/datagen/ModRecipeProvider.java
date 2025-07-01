@@ -43,11 +43,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 			@Override
 			public void generate() {
-				Registries.BLOCK.forEach(block -> {
+				Registries.BLOCK.stream().filter(VanillaLayerPlus::isNamespaced).forEach(block -> {
 					if (Args.DATAGEN_ARGS.containsKey(block)) {
 						DatagenArgs args = Args.DATAGEN_ARGS.get(block);
 
-						if (Registries.BLOCK.getId(block).getNamespace().equals(VanillaLayerPlus.MOD_ID) && args.parentBlock != null) {
+						if (args.parentBlock != null) {
 							if (block instanceof LayerBlock) {
 								layerBlockRecipe(block, args.parentBlock).offerTo(exporter);
 							}
